@@ -1,0 +1,18 @@
+---
+layout: project
+title: Consensus of multi agent system under relative unknown measurement bias
+images:
+   - ddp_pos.jpg
+   - ddp_vel.jpg
+   - ddp_bias.jpg
+report: ddp_report.pdf
+---
+
+<p>
+In the literature on consensus with errors, adaptive control algorithms in the presence of an upper bound on disturbances and stochastic errors have
+been widely studied. But what happens to consensus in the presence of measurement errors with unknown bounds? This problem is addressed in this project. Further, strategies for handling disturbance do not usually fare well for the case of measurement errors simply due to the fact that the measurement errors scale with the control gain while disturbances external to the system do not. This makes ensuring bounded trajectories with constant measurement bias a much harder problem than the disturbance robustness case.
+</p>
+
+<p>
+We have developed a model independent Lyapunov based decentralized control algorithm which ensures that networked Euler-Lagrangian system track a time varying trajectory in presence of a non-zero, unknown sensor bias in relative measurements. No knowledge of upper bounds on the measurement errors  are assumed in this work. A composite adaptive controller was devised for consensus that achieves an exponential convergence with exponential bias estimation. Simulation results on a six spacecraft formation corroborate our theoretical findings.
+</p>

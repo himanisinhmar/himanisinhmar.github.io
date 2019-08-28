@@ -1,0 +1,38 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@charset "utf-8";
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+.left-column {
+    width: 45%;
+    float: left;
+
+    img {
+        width: 90%;
+        padding-top: 30px;
+    }
+}
+
+.right-column {
+    width: 55%;
+    float: right;
+}
+
+.project-table {
+    td {
+        vertical-align: top
+    }
+
+    img {
+        max-width: 70%;
+        margin-top: 1em
+    }
+
+    h2 {
+        margin-top: 1em
+    }
+}

@@ -1,0 +1,16 @@
+---
+layout: project
+title: Real-time Algorithm for In-flight Guiding Store IMU Alignment
+images:
+   - imu_att_A1.jpg
+   - imu_pos_A1.jpg
+   - imu_vel_A1.jpg
+report: imu_report.pdf
+---
+
+<p>
+Stores are required to be dropped from a variety of flight vehicles, from airplanes to parachutes. Modern stores are ‘guided— they carry an Inertial Measurement Unit (IMU), which provides estimates of the store states (position, velocity, angular rates and attitude) in flight.  This information usually suffers from error, e.g., due to noise, drift, etc.  The standard way to filter out the noise is to use a Kalman filter. When preparing to launch the store from the mother ship, the store IMU must be correctly initialised along with the store Kalman filter. Under certain  circumstances, it may not be possible to transfer the states from the parent ship IMU to the store IMU. In this case, the store IMU must pick up the correct states by itself with the help of only onboard sensors. he major issue here is to make sure that the initial ‘guess’ state is close enough to the actual values so that the linear Kalman filter is able to converge and do so in a reasonably short time.
+</p>
+<p>
+We have developed a self alignment algorithm which is capable of working with limited and near-minimal sensor information (only GPS).  Implementation of the Kalman filter for low-cost INS/GPS integration and multi sensor fusion is carried out providing accurate and speedy estimates of the store states in a fast prototyping environment. An IMU simulator iss modeled and validated to create repeatable test data in the absence of an IMU unit
+</p>

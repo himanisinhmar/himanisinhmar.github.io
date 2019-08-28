@@ -1,0 +1,25 @@
+---
+layout: default
+author_profile: true
+---
+
+<div id="main" role="main">
+    {% include sidebar.html %}
+
+    <div class="archive">
+        <h1 id="page-title" class="page__title">{{ page.title }}</h1>
+        <i>Link to <a href="{{ site.baseurl }}/pdf/{{ page.report }}">Report</a></i>
+        <br>
+        <div class="left-column">
+        {% for img in page.images %}
+        <img class="left-img" src="{{ site.baseurl }}/img/{{ img }}">
+        <br>
+        {% endfor %}
+        </div>
+
+        <div class="right-column">
+            {{ content }}
+        </div>
+
+    </div>
+</div>

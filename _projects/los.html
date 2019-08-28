@@ -1,0 +1,13 @@
+---
+layout: project
+title: Autonomous Navigation for Spacecraft Rendezvous
+images:
+    - los_poserr.jpg
+    - los_velerr.jpg
+    - los_atterr.jpg
+report: los_publication.pdf
+---
+
+<p>
+A novel algorithm to use line of sight (LOS) measurements for relative position, attitude and angular rate estimation for autonomous spacecraft navigation is developed. Traditional relative attitude navigation is based on gyro measurements from the spacecraft in formation for estimating angular rates. But it requires information exchange between the two spacecrafts and continuous availability of gyro data. The loss of gyro data can result in high propagation errors. The approach presented here can determine relative angular velocity in the event of gyro failures or communication delays. Estimation of relative angular velocity is done  without assuming any on-board star tracker or gyros. An extended Kalman filter (EKF) is used here to estimate the relative motion. The state of the EKF consists of relative quaternion, angular velocity, position and velocity. The dynamic model of the relative motion is based on generalized Clohessy and Wiltshire equations. The angular acceleration of the follower spacecraft is modeled by Gaussian white noise. This is done for estimating relative angular rates. Numerical simulations are carried out to analyze the performance of this algorithm
+</p>
