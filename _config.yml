@@ -103,13 +103,13 @@ analytics:
 author:
 # name             : "Himani Sinhmar"
   avatar           : /img/dp.jpg
-  bio              : "MAE Department"
-  location         : "Cornell University"
+  bio              : "Verifiable Robotics Research Group"
+  location         : "525 Upson Hall, Cornell University, Ithaca, NY"
   email            : "hs962@cornell.edu"
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: # mailto:himani.sinhmar@gmail.com
+    - label: "LinkedIn"
+      icon: "fas fa-fw fa-linkedin-square"
+      url:  "https://www.linkedin.com/in/himani-sinhmar/"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
