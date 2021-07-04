@@ -104,11 +104,11 @@ author:
 # name             : "Himani Sinhmar"
   avatar           : /img/dp.jpg
   bio              : "Robotics Engineer"
-  location         : "525 Upson Hall, Cornell University"
+  location         : "525 Upson Hall,\n Cornell University,\n Ithaca, NY"
   email            : "hs962@cornell.edu"
   links:
     - label: "LinkedIn"
-      icon: "fa fa-linkedin-square"
+      icon: "fab fa-fw fa-linkedin"
       url:  "https://www.linkedin.com/in/himani-sinhmar/"
     - label: "Website"
       icon: "fas fa-fw fa-link"
