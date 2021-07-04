@@ -108,7 +108,7 @@ author:
   email            : "hs962@cornell.edu"
   links:
     - label: "LinkedIn"
-      icon: "fas fa-fw fa-linkedin"
+      icon: "fa fa-linkedin-square"
       url:  "https://www.linkedin.com/in/himani-sinhmar/"
     - label: "Website"
       icon: "fas fa-fw fa-link"
