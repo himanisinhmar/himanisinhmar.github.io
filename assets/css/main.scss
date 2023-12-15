@@ -7,6 +7,22 @@
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
+.project-entry {
+    border-bottom: 1px solid;
+    margin-top: 3em;
+}
+
+.project-description {
+    margin-top: 1em;
+    overflow: hidden;
+}
+
+.project-image {
+    min-width: 30%;
+    max-width: 50%;
+    float: right;
+}
+
 .left-column {
     width: 45%;
     float: left;
@@ -20,19 +36,4 @@
 .right-column {
     width: 55%;
     float: right;
-}
-
-.project-table {
-    td {
-        vertical-align: top
-    }
-
-    img {
-        max-width: 70%;
-        margin-top: 1em
-    }
-
-    h2 {
-        margin-top: 1em
-    }
 }

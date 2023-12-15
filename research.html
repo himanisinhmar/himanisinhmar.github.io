@@ -1,20 +1,18 @@
 ---
 layout: home
 author_profile: true
+classes: wide 
 title: Research Experience
 ---
 
-<table class="project-table">
-    {% for project in site.projects %}
-    <tr>
-        <td>
-            <a href="{{ project.url | relative_url }}">
-                <h2>
-                {{ project.title }}
-                </h2>
-            </a>
-            <img src="{{ project.images[0] | prepend: '/img/' | relative_url }}">
-        </td>
-    </tr>
-    {% endfor %}
-</table>
+{% for project in site.projects %}
+<div class="project-entry">
+    <h2> <a href="{{ project.url | relative_url }}"> {{ project.title }} </a> </h2>
+    <div class="project-description">
+        <img class="project-image" src="{{ project.images[0] | prepend: '/img/' | relative_url }}">
+        <p>
+        {{ project.content | strip_html | truncatewords: 75 }}
+        </p>
+    </div>
+</div>
+{% endfor %}
