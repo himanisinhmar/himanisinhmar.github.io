@@ -1,0 +1,21 @@
+---
+layout: project
+title: Task and Motion Planner for Robot Manipulation
+images:
+    - tampManip_intro.jpg
+    - tampManip_setup.jpg
+    - tampManip_sys_lvl_ovr.jpg
+report: tampManip.pdf
+---
+
+<p>
+    Planning in robotics is traditionally divided into two: low-level, that deal with voltages to motors, obstacle avoidance and dynamically constrained trajectories; and high-level, which work with symbolic representations of actions and results.
+    In this work, we present a systems approach to Task and Motion Planning (TAMP) that uses the affordances of the objects in the environment to produce physically feasible plans to perform the desired task.
+</p>   
+<p>
+    Affordances are defined as the possibility of an action on an object in the environment. In robotics, and manipulation in particular, affordance is a critical factor to allow robots to acquire new possibilities to manipulate novel objects once its affordance information can be singled out.
+    In this work we assume that the affordances of all objects are known. In other words, the different ways an object can be used, actions it can take or the way it extends the robot's skills.
+    Given the affordances of objects and a high-level specification (task, user-defined constraints, etc...), we automatically find the symbolic actions that generate a sequence of motion primitives from the robot's skill set that are used to satisfy the task. 
+    Our goal is to find a solution that satisfies the task dependent on object affordances and that is not specific to individual objects and react if the environment changes.  
+    To validate our framework, we implement low-level controllers to execute our system on a physical robot and execute several <a href="https://www.youtube.com/watch?v=IccXzYfV-ko"> examples</a>.
+</p>

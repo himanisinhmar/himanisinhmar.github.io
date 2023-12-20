@@ -1,0 +1,35 @@
+---
+layout: project
+title: Minimalistic Robotic Swarm
+images:
+    - swarm.jpg
+    - encap.jpg
+report: TRO.pdf
+---
+
+<p>
+    A central question guiding this reserach is: Can a team of robots achieve complex tasks, with basic sensors and decentralized decision-making, rather than relying on a handful of expensive robots with advanced sensors?
+    We address this by co-designing onboard hardware and control algorithm for multi-agent systems.
+    The unique aspect of our work is the emphasis on task completion while utilizing minimal available information and working within the constraints of limited onboard resources.
+</p>
+<p>
+    Our approach raises intriguing research questions: 
+    What quantifiable trade-offs exist when considering hardware capabilities and algorithm complexity?
+    Can we create a comprehensive framework for exploring the design space, accommodating various hardware capabilities? 
+    How can this framework facilitate task execution with agents possessing diverse computing and sensory capacities? 
+    Can collective intelligence algorithms adapt to individual agents' hardware limitations and capabilities, dynamically adjusting their behavior based on task requirements, computing power, or sensory capabilities? 
+    This research direction fundamentally reshapes our approach to multi-agent robotic systems, enabling them to operate effectively in resource-constrained environments while harnessing the full potential of diverse hardware capabilities across the robot team.
+</p>
+<p>
+    We develop a decentralized control algorithm for a robotic swarm given the task of encapsulating static and
+    moving targets in a bounded unknown environment. 
+    Focusing on guarantees and minimalism, we tackle the challenge of target searching and pursuit evasion in dynamic, unknown environments.
+    By leveraging Lyapunov stability theory and problem-specific geometric constraints, we develop correct-by-construction controllers that rely solely on a robot's simple noisy sensors to construct an impression of its surroundings. 
+    This approach reduces the reliance on accurate localization, memory usage, or communication hardware. 
+</p>
+<p>
+    Notably, our work has produced several bounds on task and system design parameters. 
+    These include quantifying trade-offs such as the relationship between the number of sensors on a robot and the number of robots required to capture a target. 
+    We also provide guarantees for encapsulating faster evaders in a minimalist swarm where each agent lacks knowledge of the evader's motion, challenging a strong assumption typically required in pursuit-evasion literature.
+
+</p>

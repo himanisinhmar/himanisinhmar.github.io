@@ -1,18 +1,42 @@
 ---
 layout: project
-title: Consensus of multi agent system under relative unknown measurement bias
+title: Consensus under sensor bias
 images:
-   - ddp_pos.jpg
-   - ddp_vel.jpg
-   - ddp_bias.jpg
-report: ddp_report.pdf
+   - ddpNew.jpg
+report:
+   - ddp_report.pdf
 ---
 
 <p>
+While adaptive control algorithms for disturbances and stochastic errors with upper bounds have been extensively studied, we delve into uncharted territory—consensus amidst measurement errors with unknown bounds.
+<!-- </p>
+
+<p> -->
+Traditional strategies for handling disturbances fall short in the face of measurement errors, as these errors scale with control gain, unlike external disturbances. 
+<!-- In this work we tackle the task of ensuring converged trajectories with constant measurement bias—a challenge surpassing the robustness case of disturbances. -->
+</p>
+
+<p>
+   We develop an adaptive distributed control law using Lyapunov methods for consensus of networked double integrator systems [<a href="pdf/ddpPaper2.pdf">Paper</a>]. 
+   The agents measure relative positions over a time-varying, undirected graph with an unknown and constant sensor bias corrupting the measurements. 
+   Our approach ensures that position consensus is achieved exponentially in
+   addition to accurate individual bias estimation. We leverage recent advances
+   in collective initial excitation based results in adaptive estimation and
+   develop conditions connecting bipartite graphs and collective initial
+   excitation. We demonstrate our algorithms in simulations on a network of double integrators with both Biartite and non-Bipartite local
+   communication network topology and biased measurements.
+</p>
+<p>
+</p>
+
+<!-- <p>
 In the literature on consensus with errors, adaptive control algorithms in the presence of an upper bound on disturbances and stochastic errors have
 been widely studied. But what happens to consensus in the presence of measurement errors with unknown bounds? This problem is addressed in this project. Further, strategies for handling disturbance do not usually fare well for the case of measurement errors simply due to the fact that the measurement errors scale with the control gain while disturbances external to the system do not. This makes ensuring bounded trajectories with constant measurement bias a much harder problem than the disturbance robustness case.
 </p>
 
 <p>
-We have developed a model independent Lyapunov based decentralized control algorithm which ensures that networked Euler-Lagrangian system track a time varying trajectory in the presence of a non-zero, unknown sensor bias in relative measurements. No knowledge of upper bounds on the measurement errors  are assumed in this work. A composite adaptive controller was devised for consensus that achieves an exponential convergence with exponential bias estimation. Simulation results on a six spacecraft formation corroborate our theoretical findings.
-</p>
+We have developed a model independent Lyapunov based decentralized control algorithm which ensures that networked Euler-Lagrangian system track a time varying trajectory in the presence of a non-zero, unknown sensor bias in relative measurements. 
+We do not assume knowledge of upper bounds on the measurement errors in this work. 
+We devise a composite adaptive controller for consensus that achieves an exponential convergence with exponential bias estimation. 
+Simulation results on a six spacecraft formation corroborate our theoretical findings.
+</p> -->

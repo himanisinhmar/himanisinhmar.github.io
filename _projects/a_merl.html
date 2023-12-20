@@ -1,0 +1,22 @@
+---
+layout: project
+title: Motion Planning of UAVs
+images:
+    - merl_exp.jpg
+report: To Come
+---
+
+<p>
+    A fundamental aspect of motion planning (MP) is that the robot must not only reach its goal but also satisfy a set of constraints at all times in the presence of modeling errors and disturbances. The constraints may include avoiding obstacles, ensuring actuator bounds and other limits on the robot state. 
+</p>
+
+<p>
+    An appealing approach is Model Predictive Control, where optimal control problems are solved in a receding horizon fashion. The main advantage of such optimization-based approaches is that they optimize performance metrics while ensuring constraint satisfaction. However, when implemented on hardware with limited capabilities, the computational cost may become prohibitive if the constraints are non-linear and non-convex in the decision variables.
+</p>
+
+<p>
+    An approach that avoids the computational burden of an MPC, potential lack of feasibility of the CBF approach, and memory issues in ISMP is the  Reference Governor (RG). This method enforces state and input constraints by dynamically modifying set-points of systems that are pre-stabilized.
+    In this work, motivated by system identification, we extend the explicit RG framework by considering non-homogeneous controller gains. 
+    We introduce a refined practical version of navigation functions tailored for utilization within an environment containing 3D polyhedral obstacles. 
+    We validate our proposed control strategy both in simulations and in real-time on a small UAV Crazyflie.
+</p>
