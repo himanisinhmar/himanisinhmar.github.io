@@ -104,8 +104,8 @@ author:
 # name             : "Himani Sinhmar"
   avatar           : /img/dp.jpg
   bio              : "Robotics Researcher"
-  location         : "Cornell University"
-  email            : "hs962@cornell.edu"
+  location         : "Princeton University"
+  email            : "himani.sinhmar@princeton.edu"
   links:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
