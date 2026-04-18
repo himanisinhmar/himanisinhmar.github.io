@@ -449,6 +449,77 @@ a:hover { text-decoration: underline; }
 .cv-card__sub   { font-size: 0.78rem; color: var(--text-2); }
 
 /* ============================================================
+   PROJECT DETAIL
+   ============================================================ */
+.proj-back {
+  padding: 1.5rem 0 0;
+  font-size: 0.8rem;
+}
+.proj-back a { color: var(--text-2); text-decoration: none; }
+.proj-back a:hover { color: var(--accent); }
+
+.proj { padding: 1.5rem 0 4rem; }
+
+.proj__header { margin-bottom: 1.25rem; }
+
+.proj__tag {
+  display: inline-block;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 2px 7px;
+  border-radius: 3px;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.proj__title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--text);
+  margin-bottom: 0.6rem;
+}
+
+.proj__meta { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+
+.proj__gallery { margin-bottom: 1.5rem; }
+
+.proj__gallery--single img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  display: block;
+}
+
+.proj__gallery--multi {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.6rem;
+}
+
+.proj__gallery--multi img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
+
+.proj__video { margin-bottom: 1.5rem; }
+
+.proj__content p {
+  font-size: 0.88rem;
+  line-height: 1.75;
+  color: var(--text-2);
+  margin-bottom: 0.9rem;
+}
+.proj__content p:last-child { margin-bottom: 0; }
+
+/* ============================================================
    FOOTER
    ============================================================ */
 .site-footer {

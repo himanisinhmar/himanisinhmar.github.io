@@ -1,66 +1,67 @@
 ---
-layout: default
-classes: wide
-author_profile: true
+layout: bare
 ---
 
-<div id="main" role="main">
-  {% include sidebar.html %}
+<div class="site">
 
-  <div class="archive project-detail">
+  <div class="proj-back">
+    <a href="{{ '/#research' | relative_url }}">← Research</a>
+  </div>
 
-    <div class="project-detail__header">
-      <h1 class="page__title">{{ page.title }}</h1>
+  <article class="proj">
 
-      <div class="project-detail__meta">
-        {% if page.theme %}
-          <span class="project-detail__tag" style="background-color: {{ page.theme_color | default: '#11999e' }}">
-            {{ page.theme }}
-          </span>
-        {% endif %}
-        {% unless page.report == "To Come" %}
-          <a class="project-detail__report-btn"
-             href="{{ site.baseurl | append: 'pdf/' | append: page.report | relative_url }}">
-            &#x1F4C4; View Report
-          </a>
+    <header class="proj__header">
+      {% if page.theme %}
+        <span class="proj__tag" style="background:{{ page.theme_color | default: '#0d9488' }}">{{ page.theme }}</span>
+      {% endif %}
+      <h1 class="proj__title">{{ page.title }}</h1>
+      <div class="proj__meta">
+        {% unless page.report == "To Come" or page.report == nil %}
+          <a class="plink" href="{{ site.baseurl | append: 'pdf/' | append: page.report | relative_url }}" target="_blank">Paper</a>
         {% endunless %}
+        {% if page.code %}
+          <a class="plink" href="{{ page.code }}" target="_blank">Code</a>
+        {% endif %}
       </div>
-    </div>
+    </header>
 
-    <!-- Image gallery -->
     {% if page.images %}
       {% assign img_count = page.images | size %}
-      <div class="project-gallery {% if img_count == 1 %}project-gallery--single{% else %}project-gallery--multi{% endif %}">
+      <div class="proj__gallery {% if img_count == 1 %}proj__gallery--single{% else %}proj__gallery--multi{% endif %}">
         {% for img in page.images %}
           <img src="{{ site.baseurl | append: 'img/' | append: img | relative_url }}" alt="{{ page.title }}">
         {% endfor %}
       </div>
     {% endif %}
 
-    <!-- Video (add video: filename.mp4 to front matter once you have media) -->
     {% if page.video %}
-      <div class="project-video">
+      <div class="proj__video">
         <video controls loop muted playsinline>
           <source src="{{ site.baseurl | append: 'media/' | append: page.video | relative_url }}" type="video/mp4">
         </video>
       </div>
     {% endif %}
 
-    <!-- YouTube embed (add youtube_id: XXXXXXXXXXX to front matter) -->
     {% if page.youtube_id %}
-      <div class="project-video">
+      <div class="proj__video">
         <iframe src="https://www.youtube-nocookie.com/embed/{{ page.youtube_id }}"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-                style="aspect-ratio:16/9; width:100%; height:auto; border-radius:8px;">
+                frameborder="0" allowfullscreen
+                style="width:100%;aspect-ratio:16/9;border-radius:6px;display:block;">
         </iframe>
       </div>
     {% endif %}
 
-    <div class="project-detail__content">
+    <div class="proj__content">
       {{ content }}
     </div>
 
-  </div>
+  </article>
+
 </div>
+
+<footer class="site-footer">
+  <div class="site">
+    Himani Sinhmar &nbsp;·&nbsp; Princeton University &nbsp;·&nbsp;
+    <a href="mailto:himani.sinhmar@princeton.edu">himani.sinhmar@princeton.edu</a>
+  </div>
+</footer>
