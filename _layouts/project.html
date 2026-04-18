@@ -5,22 +5,62 @@ author_profile: true
 ---
 
 <div id="main" role="main">
-    {% include sidebar.html %}
+  {% include sidebar.html %}
 
-    <div class="archive">
-        <h1 id="page-title" class="page__title">{{ page.title }}</h1>
-        <i>Link to <a href="{{ site.baseurl | append: 'pdf/' | append: page.report | relative_url }}">Report</a></i>
-        <br>
-        <div class="left-column">
-        {% for img in page.images %}
-        <img class="left-img" src="{{ site.baseurl | append: 'img/' | append: img | relative_url }}">
-        <br>
-        {% endfor %}
-        </div>
+  <div class="archive project-detail">
 
-        <div class="right-column">
-            {{ content }}
-        </div>
+    <div class="project-detail__header">
+      <h1 class="page__title">{{ page.title }}</h1>
 
+      <div class="project-detail__meta">
+        {% if page.theme %}
+          <span class="project-detail__tag" style="background-color: {{ page.theme_color | default: '#11999e' }}">
+            {{ page.theme }}
+          </span>
+        {% endif %}
+        {% unless page.report == "To Come" %}
+          <a class="project-detail__report-btn"
+             href="{{ site.baseurl | append: 'pdf/' | append: page.report | relative_url }}">
+            &#x1F4C4; View Report
+          </a>
+        {% endunless %}
+      </div>
     </div>
+
+    <!-- Image gallery -->
+    {% if page.images %}
+      {% assign img_count = page.images | size %}
+      <div class="project-gallery {% if img_count == 1 %}project-gallery--single{% else %}project-gallery--multi{% endif %}">
+        {% for img in page.images %}
+          <img src="{{ site.baseurl | append: 'img/' | append: img | relative_url }}" alt="{{ page.title }}">
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    <!-- Video (add video: filename.mp4 to front matter once you have media) -->
+    {% if page.video %}
+      <div class="project-video">
+        <video controls loop muted playsinline>
+          <source src="{{ site.baseurl | append: 'media/' | append: page.video | relative_url }}" type="video/mp4">
+        </video>
+      </div>
+    {% endif %}
+
+    <!-- YouTube embed (add youtube_id: XXXXXXXXXXX to front matter) -->
+    {% if page.youtube_id %}
+      <div class="project-video">
+        <iframe src="https://www.youtube-nocookie.com/embed/{{ page.youtube_id }}"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                style="aspect-ratio:16/9; width:100%; height:auto; border-radius:8px;">
+        </iframe>
+      </div>
+    {% endif %}
+
+    <div class="project-detail__content">
+      {{ content }}
+    </div>
+
+  </div>
 </div>

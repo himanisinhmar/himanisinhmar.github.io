@@ -1,18 +1,47 @@
 ---
 layout: home
 author_profile: true
-classes: wide 
-title: <a href="/pdf/researchStatement.pdf">Research Statement</a>
+classes: wide
+title: Research
 ---
 
-{% for project in site.projects %}
-<div class="project-entry">
-    <h2> <a href="{{ project.url | relative_url }}"> {{ project.title }} </a> </h2>
-    <div class="project-description">
-        <img class="project-image" src="{{ project.images[0] | prepend: '/img/' | relative_url }}">
-        <p>
-        {{ project.content | strip_html | truncatewords: 75 }}
-        </p>
-    </div>
+<p class="research-intro">
+  My work spans <strong>safe autonomy</strong>, <strong>multi-agent systems</strong>, and <strong>bio-inspired robotics</strong> — developing controllers and planners that are provably correct and deployable on resource-constrained hardware.
+  <a href="/pdf/researchStatement.pdf">Full research statement →</a>
+</p>
+
+<div class="research-themes-bar">
+  <span class="theme-pill theme-pill--swarm">Swarm Intelligence</span>
+  <span class="theme-pill theme-pill--control">Safe Control</span>
+  <span class="theme-pill theme-pill--formal">Formal Methods</span>
+  <span class="theme-pill theme-pill--bio">Bio-inspired Robotics</span>
+  <span class="theme-pill theme-pill--aerospace">Aerospace Systems</span>
 </div>
+
+<div class="project-grid">
+{% for project in site.projects %}
+  <a class="project-card" href="{{ project.url | relative_url }}">
+    <div class="project-card__image">
+      {% if project.images[0] %}
+        <img src="{{ project.images[0] | prepend: '/img/' | relative_url }}" alt="{{ project.title }}">
+      {% endif %}
+    </div>
+    <div class="project-card__body">
+      {% if project.theme %}
+        <span class="project-card__tag" style="background-color: {{ project.theme_color | default: '#11999e' }}">
+          {{ project.theme }}
+        </span>
+      {% endif %}
+      <div class="project-card__title">{{ project.title }}</div>
+      {% if project.tagline %}
+        <div class="project-card__excerpt">{{ project.tagline }}</div>
+      {% else %}
+        <div class="project-card__excerpt">{{ project.content | strip_html | truncatewords: 30 }}</div>
+      {% endif %}
+      <div class="project-card__footer">
+        <span class="project-card__readmore">Read more →</span>
+      </div>
+    </div>
+  </a>
 {% endfor %}
+</div>
