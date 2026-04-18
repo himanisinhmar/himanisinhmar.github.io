@@ -1,27 +1,484 @@
 ---
-layout: home
-author_profile: true
+layout: bare
+title: Himani Sinhmar
 ---
 
-<!-- <h3> About Me </h3> -->
+<div class="site">
 
+  <!-- ══════════════════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════════════════ -->
+  <header class="hero">
+    <img class="hero__photo" src="{{ '/img/dp.jpg' | relative_url }}" alt="Himani Sinhmar">
+    <div class="hero__body">
+      <h1 class="hero__name">Himani Sinhmar</h1>
+      <p class="hero__role">Postdoctoral Research Associate &nbsp;·&nbsp; Princeton University</p>
+      <p class="hero__tagline">
+        I work on the mathematics of collective intelligence — building robotic systems
+        that are provably safe, resource-minimal, and capable of complex emergent behavior.
+      </p>
+      <div class="hero__links">
+        <!-- Email -->
+        <a class="hero__link" href="mailto:himani.sinhmar@princeton.edu">
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+          Email
+        </a>
+        <!-- LinkedIn -->
+        <a class="hero__link" href="https://www.linkedin.com/in/himani-sinhmar/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+        <!-- Google Scholar -->
+        <a class="hero__link" href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 110-14 7 7 0 010 14zm0-24L0 9.5l4.838 3.94A8 8 0 0112 9a8 8 0 017.162 4.44L24 9.5z"/></svg>
+          Scholar
+        </a>
+        <!-- CV -->
+        <a class="hero__link" href="{{ '/pdf/cv.pdf' | relative_url }}" target="_blank">
+          <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm2 10a1 1 0 10 2h4a1 1 0 100-2H8zm1-4a1 1 0 011-1h2a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"/></svg>
+          CV
+        </a>
+      </div>
+    </div>
+  </header>
 
-<p> I am a postdoctoral research associate with <a href="https://naomi.princeton.edu/research-group/profile/">Prof. Naomi Leonard</a> at Princeton University.
-I obatined my PhD in robotics at Cornell University advised by Prof. <a href="https://www.verifiablerobotics.com/people/">Hadas Kress-Gazit</a>. Prior to my doctoral studies, I earned my Bachelor's and Master's degrees in Aerospace Engineering with a focus on Systems and Control from <a href="https://www.iitb.ac.in/">IIT Bombay</a>.
-</p>
+  <!-- ══════════════════════════════════════════════════════
+       TAB NAVIGATION
+  ═══════════════════════════════════════════════════════ -->
+  <nav class="tabs" role="tablist">
+    <button class="tab active" data-tab="about">About</button>
+    <button class="tab" data-tab="research">Research</button>
+    <button class="tab" data-tab="publications">Publications</button>
+    <button class="tab" data-tab="cv">CV</button>
+  </nav>
 
-<p>
-    My research focuses on modeling the dynamics of cooperation and collective intelligence to better understand and shape behaviors of engineered systems such as robot swarms. 
-    My doctoral work involved developing certifiably safe controllers and motion planners for resource-constrained robotic systems. My work is highly interdisciplinary and spans control theory, non-linear dynamics, collective intelligence, and formal methods.
-    My reserach vision is to create practical, theoretically sound solutions to improve the safety and reliability of robots in unstructured and dynamic environments.
-    I have also collaborated with <a href="https://cohengroup.lassp.cornell.edu/">Cohen Group</a>, <a href="https://apsellab.ece.cornell.edu/people/alyssa-apsel/">Apsel Lab</a> and <a href="https://nlabbottcornell.weebly.com/">Laboratory for Molecular engineering</a> to assist in synthesizing <a href="https://www.nature.com/articles/s41563-024-02007-7">autonomous micron-scale origami robots</a> that are active at time and length scales comparable to biological microorganisms.
-    Explore further insights into my vision <a href="/pdf/researchStatement.pdf">here</a>.
-</p>
+  <!-- ══════════════════════════════════════════════════════
+       ABOUT
+  ═══════════════════════════════════════════════════════ -->
+  <section class="tab-panel active" id="tab-about">
 
-<p>Outside of my academic pursuits, I find joy in running or hiking through the woods. 
-    I am an avid reader and always eager to engage in discussions about world affairs, human psychology, and philosophy of science. 
-    <!-- Explore this space to learn more about my academic journey and research endeavors. -->
-<!-- I have also served as a chief editor for the first ever department newsletter <a href="{{ '/pdf/newsletter.pdf' | relative_url }}">Lift-off</a> of  Aerospace Dept. at IIT Bombay.
-We have covered diverse issues of importance to the Aerospace industry and published what is hoped would be an interesting read.  -->
-</p>
+    <p class="about__vision">
+      My research focuses on <strong>modeling the dynamics of cooperation and collective intelligence</strong>
+      to better understand and shape behaviors of engineered systems such as robot swarms.
+      I develop certifiably safe controllers and motion planners for resource-constrained robots,
+      drawing on control theory, nonlinear dynamics, formal methods, and bio-inspired design.
+    </p>
 
+    <!-- Research Constellation -->
+    <div class="constellation-wrap">
+      <div class="constellation-label">Research — connected projects</div>
+
+      <svg viewBox="0 0 690 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+        <!-- ── EDGES (drawn first so nodes sit on top) ── -->
+        <!-- same-theme: swarm group -->
+        <line class="cedge" data-from="swarm" data-to="consensus"
+              x1="118" y1="115" x2="76" y2="220"
+              stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5 4"/>
+        <!-- same-theme: control group -->
+        <line class="cedge" data-from="uav" data-to="spacecraft"
+              x1="562" y1="115" x2="608" y2="220"
+              stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5 4"/>
+        <!-- cross: correct-by-construction shared axis -->
+        <line class="cedge" data-from="swarm" data-to="uav"
+              x1="118" y1="115" x2="562" y2="115"
+              stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5 4"/>
+        <!-- cross: bio → swarm (collective behavior) -->
+        <line class="cedge" data-from="origami" data-to="swarm"
+              x1="340" y1="44" x2="118" y2="115"
+              stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5 4"/>
+        <!-- cross: bio → tamp (formal synthesis) -->
+        <line class="cedge" data-from="origami" data-to="tamp"
+              x1="340" y1="44" x2="340" y2="218"
+              stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5 4"/>
+        <!-- cross: swarm → tamp (formal guarantees) -->
+        <line class="cedge" data-from="swarm" data-to="tamp"
+              x1="118" y1="115" x2="340" y2="218"
+              stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5 4"/>
+        <!-- cross: uav → tamp (constraint-based planning) -->
+        <line class="cedge" data-from="uav" data-to="tamp"
+              x1="562" y1="115" x2="340" y2="218"
+              stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5 4"/>
+        <!-- cross: consensus → tamp (distributed) -->
+        <line class="cedge" data-from="consensus" data-to="tamp"
+              x1="76" y1="220" x2="340" y2="218"
+              stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5 4"/>
+
+        <!-- ── NODES ── -->
+
+        <!-- Origami MetaBot (Bio-inspired) -->
+        <g class="cnode" data-id="origami" data-href="{{ '/projects/b_soro/' | relative_url }}">
+          <title>Origami MetaBot — Bio-inspired Robotics</title>
+          <circle cx="340" cy="44" r="30" fill="#059669" opacity="0.88"/>
+          <text x="340" y="40" text-anchor="middle" dominant-baseline="auto"
+                fill="white" font-size="9.5" font-weight="600" font-family="Inter, sans-serif">Origami</text>
+          <text x="340" y="52" text-anchor="middle" dominant-baseline="auto"
+                fill="white" font-size="9.5" font-weight="600" font-family="Inter, sans-serif">MetaBot</text>
+        </g>
+
+        <!-- Swarm Encapsulation -->
+        <g class="cnode" data-id="swarm" data-href="{{ '/projects/a_swarm/' | relative_url }}">
+          <title>Swarm Encapsulation — Swarm Intelligence</title>
+          <circle cx="118" cy="115" r="30" fill="#0d9488" opacity="0.9"/>
+          <text x="118" y="111" text-anchor="middle" dominant-baseline="auto"
+                fill="white" font-size="9.5" font-weight="600" font-family="Inter, sans-serif">Swarm</text>
+          <text x="118" y="123" text-anchor="middle" dominant-baseline="auto"
+                fill="white" font-size="9.5" font-weight="600" font-family="Inter, sans-serif">Control</text>
+        </g>
+
+        <!-- UAV Planning -->
+        <g class="cnode" data-id="uav" data-href="{{ '/projects/a_merl/' | relative_url }}">
+          <title>UAV Motion Planning — Safe Control</title>
+          <circle cx="562" cy="115" r="30" fill="#4338ca" opacity="0.88"/>
+          <text x="562" y="111" text-anchor="middle" dominant-baseline="auto"
+                fill="white" font-size="9.5" font-weight="600" font-family="Inter, sans-serif">UAV</text>
+          <text x="562" y="123" text-anchor="middle" dominant-baseline="auto"
+                fill="white" font-size="9.5" font-weight="600" font-family="Inter, sans-serif">Planning</text>
+        </g>
+
+        <!-- Consensus under Bias -->
+        <g class="cnode" data-id="consensus" data-href="{{ '/projects/ddp/' | relative_url }}">
+          <title>Consensus under Sensor Bias — Multi-Agent Systems</title>
+          <circle cx="76" cy="220" r="30" fill="#14b8a6" opacity="0.88"/>
+          <text x="76" y="216" text-anchor="middle" dominant-baseline="auto"
+                fill="white" font-size="9" font-weight="600" font-family="Inter, sans-serif">Consensus</text>
+          <text x="76" y="228" text-anchor="middle" dominant-baseline="auto"
+                fill="white" font-size="9" font-weight="600" font-family="Inter, sans-serif">&amp; Bias</text>
+        </g>
+
+        <!-- TAMP Manipulation -->
+        <g class="cnode" data-id="tamp" data-href="{{ '/projects/c_tampManip/' | relative_url }}">
+          <title>Task &amp; Motion Planning — Formal Methods</title>
+          <circle cx="340" cy="218" r="30" fill="#7c3aed" opacity="0.88"/>
+          <text x="340" y="214" text-anchor="middle" dominant-baseline="auto"
+                fill="white" font-size="9.5" font-weight="600" font-family="Inter, sans-serif">Task &amp;</text>
+          <text x="340" y="226" text-anchor="middle" dominant-baseline="auto"
+                fill="white" font-size="9.5" font-weight="600" font-family="Inter, sans-serif">Motion</text>
+        </g>
+
+        <!-- Spacecraft Nav -->
+        <g class="cnode" data-id="spacecraft" data-href="{{ '/projects/los/' | relative_url }}">
+          <title>Spacecraft Rendezvous — Safe Control</title>
+          <circle cx="608" cy="220" r="30" fill="#6366f1" opacity="0.88"/>
+          <text x="608" y="216" text-anchor="middle" dominant-baseline="auto"
+                fill="white" font-size="9" font-weight="600" font-family="Inter, sans-serif">Spacecraft</text>
+          <text x="608" y="228" text-anchor="middle" dominant-baseline="auto"
+                fill="white" font-size="9" font-weight="600" font-family="Inter, sans-serif">Nav</text>
+        </g>
+
+      </svg>
+
+      <!-- Legend -->
+      <div class="constellation-legend">
+        <span class="legend-item"><span class="legend-dot" style="background:#0d9488"></span>Swarm Intelligence</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#4338ca"></span>Safe Control</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#7c3aed"></span>Formal Methods</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#059669"></span>Bio-inspired</span>
+        <span style="font-size:0.68rem;color:var(--text-3);margin-left:auto;">Hover to explore · Click to read</span>
+      </div>
+    </div>
+
+    <p class="about__bio">
+      I am a postdoctoral research associate with
+      <a href="https://naomi.princeton.edu/research-group/profile/">Prof. Naomi Leonard</a>
+      at Princeton University. I obtained my PhD in robotics at Cornell University advised by
+      <a href="https://www.verifiablerobotics.com/people/">Prof. Hadas Kress-Gazit</a>.
+      Prior to my doctoral studies, I earned my Bachelor's and Master's degrees in Aerospace Engineering
+      from <a href="https://www.iitb.ac.in/">IIT Bombay</a>.
+    </p>
+    <p class="about__bio">
+      I have collaborated with the
+      <a href="https://cohengroup.lassp.cornell.edu/">Cohen Group</a>,
+      <a href="https://apsellab.ece.cornell.edu/people/alyssa-apsel/">Apsel Lab</a>, and
+      <a href="https://nlabbottcornell.weebly.com/">Laboratory for Molecular Engineering</a>
+      to develop
+      <a href="https://www.nature.com/articles/s41563-024-02007-7">autonomous micron-scale origami robots</a>
+      active at time and length scales comparable to biological microorganisms.
+    </p>
+    <p class="about__bio">
+      Outside research, I enjoy running and hiking, and I am an avid reader with a particular
+      interest in world affairs, human psychology, and philosophy of science.
+    </p>
+
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       RESEARCH
+  ═══════════════════════════════════════════════════════ -->
+  <section class="tab-panel" id="tab-research">
+
+    <div class="vision-block">
+      <p>
+        My research vision is to create practical, theoretically sound solutions to improve the
+        safety and reliability of robots in unstructured and dynamic environments. I am particularly
+        interested in how <em>collective intelligence</em> — decentralized coordination with minimal
+        sensing — can yield certifiably correct behavior at scale.
+      </p>
+      <p>
+        My work is highly interdisciplinary, spanning <strong>control theory</strong>,
+        <strong>nonlinear dynamics</strong>, <strong>formal methods</strong>, and
+        <strong>bio-inspired robotics</strong>.
+        <a href="{{ '/pdf/researchStatement.pdf' | relative_url }}">Full research statement →</a>
+      </p>
+    </div>
+
+    <div class="section-label">Projects</div>
+    <div class="project-list">
+
+      {% for project in site.projects %}
+      {% unless project.path contains 'nonlinear' or project.path contains 'ramjet' or project.path contains 'imu' %}
+      <div class="project-item">
+
+        <div class="project-item__media">
+          {% if project.images[0] %}
+            <img src="{{ project.images[0] | prepend: '/img/' | relative_url }}"
+                 alt="{{ project.title }}">
+          {% endif %}
+        </div>
+
+        <div class="project-item__body">
+          {% if project.theme %}
+            <span class="project-item__tag"
+                  style="background:{{ project.theme_color | default: '#0d9488' }}">
+              {{ project.theme }}
+            </span>
+          {% endif %}
+
+          <a class="project-item__title" href="{{ project.url | relative_url }}">
+            {{ project.title }}
+          </a>
+
+          <p class="project-item__synopsis">
+            {% if project.tagline %}{{ project.tagline }}
+            {% else %}{{ project.content | strip_html | truncatewords: 40 }}{% endif %}
+          </p>
+
+          <div class="project-item__links">
+            <a class="plink plink--primary" href="{{ project.url | relative_url }}">Details →</a>
+            {% unless project.report == "To Come" or project.report == nil %}
+              <a class="plink" href="{{ '/pdf/' | append: project.report | relative_url }}" target="_blank">Paper</a>
+            {% endunless %}
+            {% if project.code %}
+              <a class="plink" href="{{ project.code }}" target="_blank">Code</a>
+            {% endif %}
+            {% if project.video or project.youtube_id %}
+              <a class="plink" href="{{ project.url | relative_url }}">Video</a>
+            {% endif %}
+          </div>
+        </div>
+
+      </div>
+      {% endunless %}
+      {% endfor %}
+
+    </div><!-- /project-list -->
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       PUBLICATIONS
+  ═══════════════════════════════════════════════════════ -->
+  <section class="tab-panel" id="tab-publications">
+
+    <div class="pub-year-group">
+      <div class="pub-year-label">2024</div>
+
+      <div class="pub-item">
+        <div class="pub-item__title">Practical and Safe Navigation Function Based Motion Planning of UAVs</div>
+        <div class="pub-item__authors"><strong>Himani Sinhmar</strong>, Marcus Greiff, Stefano Di Cairano</div>
+        <div class="pub-item__venue">International Conference on Robotics and Automation (ICRA 2024)</div>
+        <div class="pub-item__links">
+          <a class="pub-link" href="https://merl.com/publications/docs/TR2024-055.pdf" target="_blank">Paper</a>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-item__title">Multi-Source Encapsulation With Guaranteed Convergence Using Minimalist Robots</div>
+        <div class="pub-item__authors"><strong>Himani Sinhmar</strong>, Hadas Kress-Gazit</div>
+        <div class="pub-item__venue">Distributed Autonomous Robotic Systems (DARS 2024)</div>
+        <div class="pub-item__links">
+          <a class="pub-link" href="https://arxiv.org/abs/2404.19138" target="_blank">Paper</a>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-item__title">Microscopic, continuum, compliant, and electronically configurable metasheet robots</div>
+        <div class="pub-item__authors">Qingkun Liu*, Wei Wang*, <strong>Himani Sinhmar</strong>, Itay Griniasty, Jason Z. Kim, et al.</div>
+        <div class="pub-item__venue">Nature Materials, 2024</div>
+        <div class="pub-item__links">
+          <a class="pub-link" href="https://www.nature.com/articles/s41563-024-02007-7" target="_blank">Paper</a>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-item__title">Design and Control of Microscopic Robot Sheet</div>
+        <div class="pub-item__authors"><strong>Himani Sinhmar</strong>, Itay Griniasty, Qingkun Liu, Wei Wang, Itai Cohen, Hadas Kress-Gazit</div>
+        <div class="pub-item__venue">ICRA 2024 Workshop</div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-item__title">Motion Planning and Control with Multi-Stage Construction of Invariant Sets</div>
+        <div class="pub-item__authors">Marcus Greiff, Stefano Di Cairano, <strong>Himani Sinhmar</strong></div>
+        <div class="pub-item__venue">US Patent, Pending — Filed March 2024</div>
+      </div>
+
+    </div>
+
+    <div class="pub-year-group">
+      <div class="pub-year-label">2023</div>
+
+      <div class="pub-item">
+        <div class="pub-item__title">Guaranteed Encapsulation of Targets with Unknown Motion by a Minimalist Robotic Swarm</div>
+        <div class="pub-item__authors"><strong>Himani Sinhmar</strong>, Hadas Kress-Gazit</div>
+        <div class="pub-item__venue">IEEE Transactions on Robotics (TRO), 2023</div>
+        <div class="pub-item__links">
+          <a class="pub-link" href="https://ieeexplore.ieee.org/document/10342817" target="_blank">Paper</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="pub-year-group">
+      <div class="pub-year-label">2022</div>
+
+      <div class="pub-item">
+        <div class="pub-item__title">Decentralized Control of Minimalistic Robotic Swarms For Guaranteed Target Encapsulation</div>
+        <div class="pub-item__authors"><strong>Himani Sinhmar</strong>, Hadas Kress-Gazit</div>
+        <div class="pub-item__venue">IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2022)</div>
+        <div class="pub-item__links">
+          <a class="pub-link" href="https://ieeexplore.ieee.org/document/9981959" target="_blank">Paper</a>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-item__title">Consensus of networked double integrator systems under sensor bias</div>
+        <div class="pub-item__authors">Pallavi Sinha, Srikant Sukumar, <strong>Himani Sinhmar</strong></div>
+        <div class="pub-item__venue">International Journal of Adaptive Control and Signal Processing, November 2022</div>
+        <div class="pub-item__links">
+          <a class="pub-link" href="https://doi.org/10.1002/acs.3524" target="_blank">Paper</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="pub-year-group">
+      <div class="pub-year-label">Earlier</div>
+
+      <div class="pub-item">
+        <div class="pub-item__title">Distributed model independent algorithm for spacecraft synchronization under relative measurement bias</div>
+        <div class="pub-item__authors"><strong>Himani Sinhmar</strong>, Srikant Sukumar</div>
+        <div class="pub-item__venue">5th CEAS Conference on Guidance, Navigation and Control</div>
+        <div class="pub-item__links">
+          <a class="pub-link" href="https://www.researchgate.net/publication/332874462_Distributed_model_independent_algorithm_for_spacecraft_synchronization_under_relative_measurement_bias" target="_blank">Paper</a>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-item__title">Relative Autonomous Navigation Without Communication Between Spacecraft Using Line of Sight Measurements</div>
+        <div class="pub-item__authors"><strong>Himani Sinhmar</strong>, Vinod Kumar</div>
+        <div class="pub-item__venue">8th IEEE/CSAA GNC Conference, Xiamen, China, 2018</div>
+        <div class="pub-item__links">
+          <a class="pub-link" href="https://ieeexplore.ieee.org/document/9018755" target="_blank">Paper</a>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-item__title">Direct Theoretical Approach to Jet Propulsion Principles based on Pressure Variation inside the Engine</div>
+        <div class="pub-item__authors"><strong>Himani Sinhmar</strong>, Pallavi Rastogi, Shripad P. Mahulikar</div>
+        <div class="pub-item__links">
+          <a class="pub-link" href="{{ '/pdf/ramjet_publication.pdf' | relative_url }}" target="_blank">Preprint</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       CV
+  ═══════════════════════════════════════════════════════ -->
+  <section class="tab-panel" id="tab-cv">
+    <p class="cv-intro">
+      My full academic CV covers research experience, publications, teaching, and awards.
+      The research statement gives a detailed account of my vision and ongoing projects.
+    </p>
+    <div class="cv-cards">
+      <a class="cv-card" href="{{ '/pdf/cv.pdf' | relative_url }}" target="_blank">
+        <span class="cv-card__icon">📄</span>
+        <div>
+          <div class="cv-card__title">Curriculum Vitae</div>
+          <div class="cv-card__sub">Full academic CV — 3 pages</div>
+        </div>
+      </a>
+      <a class="cv-card" href="{{ '/pdf/researchStatement.pdf' | relative_url }}" target="_blank">
+        <span class="cv-card__icon">🔬</span>
+        <div>
+          <div class="cv-card__title">Research Statement</div>
+          <div class="cv-card__sub">Vision, ongoing work, and future directions</div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+</div><!-- /site -->
+
+<footer class="site-footer">
+  <div class="site">
+    Himani Sinhmar &nbsp;·&nbsp; Princeton University &nbsp;·&nbsp;
+    <a href="mailto:himani.sinhmar@princeton.edu">himani.sinhmar@princeton.edu</a>
+  </div>
+</footer>
+
+<!-- ══════════════════════════════════════════════════════
+     JAVASCRIPT
+═══════════════════════════════════════════════════════ -->
+<script>
+(function () {
+  // ── Tab switching ──
+  const tabs   = Array.from(document.querySelectorAll('.tab'));
+  const panels = Array.from(document.querySelectorAll('.tab-panel'));
+
+  function switchTab(id) {
+    tabs.forEach(t =>   t.classList.toggle('active', t.dataset.tab === id));
+    panels.forEach(p => p.classList.toggle('active', p.id === 'tab-' + id));
+    history.replaceState(null, '', '#' + id);
+  }
+
+  tabs.forEach(t => t.addEventListener('click', () => switchTab(t.dataset.tab)));
+
+  const hash = window.location.hash.slice(1);
+  if (hash && ['about','research','publications','cv'].includes(hash)) switchTab(hash);
+
+  // ── Constellation hover ──
+  const nodes = Array.from(document.querySelectorAll('.cnode'));
+  const edges = Array.from(document.querySelectorAll('.cedge'));
+
+  nodes.forEach(node => {
+    node.addEventListener('mouseenter', function () {
+      const id = this.dataset.id;
+      edges.forEach(e => {
+        const linked = e.dataset.from === id || e.dataset.to === id;
+        e.classList.toggle('lit',    linked);
+        e.classList.toggle('dimmed', !linked);
+      });
+      nodes.forEach(n => {
+        if (n === this) return;
+        const nid = n.dataset.id;
+        const linked = edges.some(e =>
+          (e.dataset.from === id && e.dataset.to === nid) ||
+          (e.dataset.to   === id && e.dataset.from === nid)
+        );
+        n.classList.toggle('lit',    linked);
+        n.classList.toggle('dimmed', !linked);
+      });
+    });
+
+    node.addEventListener('mouseleave', function () {
+      edges.forEach(e => e.classList.remove('lit', 'dimmed'));
+      nodes.forEach(n => n.classList.remove('lit', 'dimmed'));
+    });
+
+    node.addEventListener('click', function () {
+      if (this.dataset.href) window.location.href = this.dataset.href;
+    });
+  });
+})();
+</script>
