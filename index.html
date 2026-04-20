@@ -79,61 +79,64 @@ title: Himani Sinhmar
         </p>
       </div>
 
-      <!-- RIGHT: research theme cards -->
-      <div class="theme-grid">
+      <!-- RIGHT: research theme sections with all videos -->
+      <div class="theme-sections">
 
-        <a class="theme-card" href="{{ '/#research' | relative_url }}" onclick="switchTabGlobal('research');return false;">
-          <video class="theme-card__bg" autoplay loop muted playsinline>
-            <source src="{{ '/media/phd_square.mp4' | relative_url }}" type="video/mp4">
-          </video>
-          <div class="theme-card__overlay">
-            <div class="theme-card__name">Collective Intelligence</div>
-            <div class="theme-card__chips">
-              <span class="theme-chip">Minimalist Swarms</span>
-              <span class="theme-chip">Shape-Morphing MetaBots</span>
-            </div>
+        <div class="theme-section">
+          <span class="theme-section__label" style="background:#0d9488">Collective Intelligence</span>
+          <div class="theme-section__videos">
+            <video controls muted loop playsinline>
+              <source src="{{ '/media/phd_square.mp4' | relative_url }}" type="video/mp4">
+            </video>
+            <video controls muted loop playsinline>
+              <source src="{{ '/media/sheetRobot.mp4' | relative_url }}" type="video/mp4">
+            </video>
+            <video controls muted loop playsinline>
+              <source src="{{ '/media/locomtion_sim.mp4' | relative_url }}" type="video/mp4">
+            </video>
+            <video controls muted loop playsinline>
+              <source src="{{ '/media/locomtion_exp.mp4' | relative_url }}" type="video/mp4">
+            </video>
           </div>
-        </a>
+        </div>
 
-        <a class="theme-card" href="{{ '/#research' | relative_url }}" onclick="switchTabGlobal('research');return false;">
-          <video class="theme-card__bg" autoplay loop muted playsinline>
-            <source src="{{ '/media/env-moni.mp4' | relative_url }}" type="video/mp4">
-          </video>
-          <div class="theme-card__overlay">
-            <div class="theme-card__name">Neuromorphic Decision Dynamics</div>
-            <div class="theme-card__chips">
-              <span class="theme-chip">Environment Monitoring</span>
-              <span class="theme-chip">Multi-Robot Navigation</span>
-            </div>
+        <div class="theme-section">
+          <span class="theme-section__label" style="background:#4f46e5">Neuromorphic Decision Dynamics and Control</span>
+          <div class="theme-section__videos">
+            <video controls muted loop playsinline>
+              <source src="{{ '/media/env-moni.mp4' | relative_url }}" type="video/mp4">
+            </video>
+            <video controls muted loop playsinline>
+              <source src="{{ '/media/env.mp4' | relative_url }}" type="video/mp4">
+            </video>
+            <video controls muted loop playsinline>
+              <source src="{{ '/media/decision.mp4' | relative_url }}" type="video/mp4">
+            </video>
+            <video controls muted loop playsinline>
+              <source src="{{ '/media/hardware_video.mp4' | relative_url }}" type="video/mp4">
+            </video>
           </div>
-        </a>
+        </div>
 
-        <a class="theme-card" href="{{ '/#research' | relative_url }}" onclick="switchTabGlobal('research');return false;">
-          <video class="theme-card__bg" autoplay loop muted playsinline>
-            <source src="{{ '/media/tamp-hardware.mp4' | relative_url }}" type="video/mp4">
-          </video>
-          <div class="theme-card__overlay">
-            <div class="theme-card__name">Task and Motion Planning</div>
-            <div class="theme-card__chips">
-              <span class="theme-chip">Affordance-Aware TAMP</span>
-            </div>
+        <div class="theme-section">
+          <span class="theme-section__label" style="background:#7c3aed">Task and Motion Planning</span>
+          <div class="theme-section__videos">
+            <video controls muted loop playsinline>
+              <source src="{{ '/media/tamp-hardware.mp4' | relative_url }}" type="video/mp4">
+            </video>
           </div>
-        </a>
+        </div>
 
-        <a class="theme-card" href="{{ '/#research' | relative_url }}" onclick="switchTabGlobal('research');return false;">
-          <video class="theme-card__bg" autoplay loop muted playsinline>
-            <source src="{{ '/media/merl.mp4' | relative_url }}" type="video/mp4">
-          </video>
-          <div class="theme-card__overlay">
-            <div class="theme-card__name">Motion Planning and Control</div>
-            <div class="theme-card__chips">
-              <span class="theme-chip">UAV Motion Planning</span>
-              <span class="theme-chip">Aerospace Systems</span>
-            </div>
+        <div class="theme-section">
+          <span class="theme-section__label" style="background:#0369a1">Motion Planning and Control</span>
+          <div class="theme-section__videos">
+            <video controls muted loop playsinline>
+              <source src="{{ '/media/merl.mp4' | relative_url }}" type="video/mp4">
+            </video>
           </div>
-        </a>
+        </div>
 
-      </div><!-- /theme-grid -->
+      </div><!-- /theme-sections -->
     </div><!-- /about-columns -->
   </section>
 
@@ -144,7 +147,7 @@ title: Himani Sinhmar
 
     <div class="vision-block">
       <p>
-        My research asks a common question across scales and platforms: how can robots make fast, reliable, and provably safe decisions when sensing, computation, communication, or actuation are limited? I approach this through tools from control theory, nonlinear dynamics, and collective intelligence, with an emphasis on decentralized algorithms that remain both mathematically analyzable and practically deployable.
+        I study how robots can make fast, reliable, and provably safe decisions when sensing, computation, communication, or actuation are limited. My work combines control theory, nonlinear dynamics, and collective intelligence to develop decentralized decision-making and control frameworks that are both mathematically grounded and deployable on real robotic systems.
         <a href="{{ '/pdf/researchStatement.pdf' | relative_url }}">Research statement →</a>
       </p>
     </div>
@@ -158,7 +161,7 @@ title: Himani Sinhmar
 
         <div class="project-item__media">
           {% if project.videos[0] %}
-            <video autoplay loop muted playsinline>
+            <video controls muted loop playsinline>
               <source src="{{ project.videos[0] | prepend: '/media/' | relative_url }}" type="video/mp4">
             </video>
           {% elsif project.images[0] %}
