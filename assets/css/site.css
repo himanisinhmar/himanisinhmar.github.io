@@ -18,7 +18,7 @@
   --c-formal:   #7c3aed;
   --c-bio:      #059669;
   --radius:     7px;
-  --max-w:      820px;
+  --max-w:      1140px;
 }
 
 html { scroll-behavior: smooth; }
@@ -85,7 +85,6 @@ a:hover { text-decoration: underline; }
   line-height: 1.7;
   color: var(--text);
   margin-bottom: 1rem;
-  max-width: 560px;
 }
 
 .hero__links {
@@ -160,7 +159,6 @@ a:hover { text-decoration: underline; }
   font-size: 1rem;
   line-height: 1.75;
   color: var(--text);
-  max-width: 680px;
   margin-bottom: 0.5rem;
 }
 
@@ -168,7 +166,6 @@ a:hover { text-decoration: underline; }
   font-size: 0.88rem;
   line-height: 1.8;
   color: var(--text-2);
-  max-width: 680px;
   margin-bottom: 0.9rem;
 }
 
