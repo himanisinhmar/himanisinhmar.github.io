@@ -15,31 +15,32 @@ layout: bare
         <span class="proj__tag" style="background:{{ page.theme_color | default: '#0d9488' }}">{{ page.theme }}</span>
       {% endif %}
       <h1 class="proj__title">{{ page.title }}</h1>
-      <div class="proj__meta">
-        {% unless page.report == "To Come" or page.report == nil %}
-          <a class="plink" href="{{ site.baseurl | append: 'pdf/' | append: page.report | relative_url }}" target="_blank">Paper</a>
-        {% endunless %}
-        {% if page.code %}
-          <a class="plink" href="{{ page.code }}" target="_blank">Code</a>
-        {% endif %}
-      </div>
+      {% if page.papers %}
+        <div class="proj__meta">
+          {% for p in page.papers %}
+            <a class="plink" href="{{ '/pdf/' | append: p.pdf | relative_url }}" target="_blank">{{ p.label }}</a>
+          {% endfor %}
+        </div>
+      {% endif %}
     </header>
 
-    {% if page.images %}
-      {% assign img_count = page.images | size %}
-      <div class="proj__gallery {% if img_count == 1 %}proj__gallery--single{% else %}proj__gallery--multi{% endif %}">
-        {% for img in page.images %}
-          <img src="{{ site.baseurl | append: 'img/' | append: img | relative_url }}" alt="{{ page.title }}">
-        {% endfor %}
-      </div>
-    {% endif %}
-
-    {% if page.video %}
-      <div class="proj__video">
-        <video controls loop muted playsinline>
-          <source src="{{ site.baseurl | append: 'media/' | append: page.video | relative_url }}" type="video/mp4">
-        </video>
-      </div>
+    {% if page.videos %}
+      {% assign vid_count = page.videos | size %}
+      {% if vid_count == 1 %}
+        <div class="proj__gallery proj__gallery--single">
+          <video autoplay loop muted playsinline>
+            <source src="{{ '/media/' | append: page.videos[0] | relative_url }}" type="video/mp4">
+          </video>
+        </div>
+      {% else %}
+        <div class="proj__gallery proj__gallery--multi">
+          {% for v in page.videos %}
+            <video autoplay loop muted playsinline>
+              <source src="{{ '/media/' | append: v | relative_url }}" type="video/mp4">
+            </video>
+          {% endfor %}
+        </div>
+      {% endif %}
     {% endif %}
 
     {% if page.youtube_id %}

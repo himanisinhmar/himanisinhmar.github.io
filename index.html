@@ -60,118 +60,60 @@ title: Himani Sinhmar
       I am a Postdoctoral Research Associate at Princeton University working on robotics, control theory, neuromorphic decision-making, and game theory. I study how robots can make fast, reliable decisions and coordinate in challenging real-world environments using only local sensing and minimal onboard resources. My work develops decentralized frameworks for multi-agent systems that operate without GPS, WiFi, explicit communication, or centralized coordination. Instead of relying on long-horizon optimization or repeated replanning, I am interested in continuous adaptation through dynamical interaction rules, where safe and coordinated collective behavior emerges online from local information. More broadly, my research explores how these mechanisms can support scalable environment monitoring and autonomous operation in the wild.
     </p>
 
-    <!-- Research Constellation -->
-    <div class="constellation-wrap">
-      <div class="constellation-label">Research · connected projects</div>
+    <!-- Research Theme Cards -->
+    <div class="theme-grid">
 
-      <svg viewBox="0 0 690 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <a class="theme-card" href="{{ '/#research' | relative_url }}" onclick="switchTabGlobal('research');return false;">
+        <video class="theme-card__bg" autoplay loop muted playsinline>
+          <source src="{{ '/media/phd_square.mp4' | relative_url }}" type="video/mp4">
+        </video>
+        <div class="theme-card__overlay" style="--tc: #0d9488">
+          <div class="theme-card__name">Collective Intelligence</div>
+          <div class="theme-card__chips">
+            <span class="theme-chip">Minimalist Swarms</span>
+            <span class="theme-chip">Shape-Morphing MetaBots</span>
+          </div>
+        </div>
+      </a>
 
-        <!-- ── EDGES (drawn first so nodes sit on top) ── -->
-        <!-- same-theme: swarm group -->
-        <line class="cedge" data-from="swarm" data-to="consensus"
-              x1="118" y1="115" x2="76" y2="220"
-              stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5 4"/>
-        <!-- same-theme: control group -->
-        <line class="cedge" data-from="uav" data-to="spacecraft"
-              x1="562" y1="115" x2="608" y2="220"
-              stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5 4"/>
-        <!-- cross: correct-by-construction shared axis -->
-        <line class="cedge" data-from="swarm" data-to="uav"
-              x1="118" y1="115" x2="562" y2="115"
-              stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5 4"/>
-        <!-- cross: bio → swarm (collective behavior) -->
-        <line class="cedge" data-from="origami" data-to="swarm"
-              x1="340" y1="44" x2="118" y2="115"
-              stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5 4"/>
-        <!-- cross: bio → tamp (formal synthesis) -->
-        <line class="cedge" data-from="origami" data-to="tamp"
-              x1="340" y1="44" x2="340" y2="218"
-              stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5 4"/>
-        <!-- cross: swarm → tamp (formal guarantees) -->
-        <line class="cedge" data-from="swarm" data-to="tamp"
-              x1="118" y1="115" x2="340" y2="218"
-              stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5 4"/>
-        <!-- cross: uav → tamp (constraint-based planning) -->
-        <line class="cedge" data-from="uav" data-to="tamp"
-              x1="562" y1="115" x2="340" y2="218"
-              stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5 4"/>
-        <!-- cross: consensus → tamp (distributed) -->
-        <line class="cedge" data-from="consensus" data-to="tamp"
-              x1="76" y1="220" x2="340" y2="218"
-              stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5 4"/>
+      <a class="theme-card" href="{{ '/#research' | relative_url }}" onclick="switchTabGlobal('research');return false;">
+        <video class="theme-card__bg" autoplay loop muted playsinline>
+          <source src="{{ '/media/env-moni.mp4' | relative_url }}" type="video/mp4">
+        </video>
+        <div class="theme-card__overlay" style="--tc: #4f46e5">
+          <div class="theme-card__name">Neuromorphic Decision Dynamics</div>
+          <div class="theme-card__chips">
+            <span class="theme-chip">Environment Monitoring</span>
+            <span class="theme-chip">Multi-Robot Navigation</span>
+          </div>
+        </div>
+      </a>
 
-        <!-- ── NODES ── -->
+      <a class="theme-card" href="{{ '/#research' | relative_url }}" onclick="switchTabGlobal('research');return false;">
+        <video class="theme-card__bg" autoplay loop muted playsinline>
+          <source src="{{ '/media/tamp-hardware.mp4' | relative_url }}" type="video/mp4">
+        </video>
+        <div class="theme-card__overlay" style="--tc: #7c3aed">
+          <div class="theme-card__name">Task and Motion Planning</div>
+          <div class="theme-card__chips">
+            <span class="theme-chip">Affordance-Aware TAMP</span>
+          </div>
+        </div>
+      </a>
 
-        <!-- Origami MetaBot (Bio-inspired) -->
-        <g class="cnode" data-id="origami" data-href="{{ '/projects/b_soro/' | relative_url }}">
-          <title>Origami MetaBot,Bio-inspired Robotics</title>
-          <circle cx="340" cy="44" r="30" fill="#059669" opacity="0.88"/>
-          <text x="340" y="40" text-anchor="middle" dominant-baseline="auto"
-                fill="white" font-size="9.5" font-weight="600" font-family="Inter, sans-serif">Origami</text>
-          <text x="340" y="52" text-anchor="middle" dominant-baseline="auto"
-                fill="white" font-size="9.5" font-weight="600" font-family="Inter, sans-serif">MetaBot</text>
-        </g>
+      <a class="theme-card" href="{{ '/#research' | relative_url }}" onclick="switchTabGlobal('research');return false;">
+        <video class="theme-card__bg" autoplay loop muted playsinline>
+          <source src="{{ '/media/merl.mp4' | relative_url }}" type="video/mp4">
+        </video>
+        <div class="theme-card__overlay" style="--tc: #0369a1">
+          <div class="theme-card__name">Motion Planning and Control</div>
+          <div class="theme-card__chips">
+            <span class="theme-chip">UAV Motion Planning</span>
+            <span class="theme-chip">Aerospace Systems</span>
+          </div>
+        </div>
+      </a>
 
-        <!-- Swarm Encapsulation -->
-        <g class="cnode" data-id="swarm" data-href="{{ '/projects/a_swarm/' | relative_url }}">
-          <title>Swarm Encapsulation,Swarm Intelligence</title>
-          <circle cx="118" cy="115" r="30" fill="#0d9488" opacity="0.9"/>
-          <text x="118" y="111" text-anchor="middle" dominant-baseline="auto"
-                fill="white" font-size="9.5" font-weight="600" font-family="Inter, sans-serif">Swarm</text>
-          <text x="118" y="123" text-anchor="middle" dominant-baseline="auto"
-                fill="white" font-size="9.5" font-weight="600" font-family="Inter, sans-serif">Control</text>
-        </g>
-
-        <!-- UAV Planning -->
-        <g class="cnode" data-id="uav" data-href="{{ '/projects/a_merl/' | relative_url }}">
-          <title>UAV Motion Planning,Safe Control</title>
-          <circle cx="562" cy="115" r="30" fill="#4338ca" opacity="0.88"/>
-          <text x="562" y="111" text-anchor="middle" dominant-baseline="auto"
-                fill="white" font-size="9.5" font-weight="600" font-family="Inter, sans-serif">UAV</text>
-          <text x="562" y="123" text-anchor="middle" dominant-baseline="auto"
-                fill="white" font-size="9.5" font-weight="600" font-family="Inter, sans-serif">Planning</text>
-        </g>
-
-        <!-- Consensus under Bias -->
-        <g class="cnode" data-id="consensus" data-href="{{ '/projects/ddp/' | relative_url }}">
-          <title>Consensus under Sensor Bias,Multi-Agent Systems</title>
-          <circle cx="76" cy="220" r="30" fill="#14b8a6" opacity="0.88"/>
-          <text x="76" y="216" text-anchor="middle" dominant-baseline="auto"
-                fill="white" font-size="9" font-weight="600" font-family="Inter, sans-serif">Consensus</text>
-          <text x="76" y="228" text-anchor="middle" dominant-baseline="auto"
-                fill="white" font-size="9" font-weight="600" font-family="Inter, sans-serif">&amp; Bias</text>
-        </g>
-
-        <!-- TAMP Manipulation -->
-        <g class="cnode" data-id="tamp" data-href="{{ '/projects/c_tampManip/' | relative_url }}">
-          <title>Task &amp; Motion Planning,Formal Methods</title>
-          <circle cx="340" cy="218" r="30" fill="#7c3aed" opacity="0.88"/>
-          <text x="340" y="214" text-anchor="middle" dominant-baseline="auto"
-                fill="white" font-size="9.5" font-weight="600" font-family="Inter, sans-serif">Task &amp;</text>
-          <text x="340" y="226" text-anchor="middle" dominant-baseline="auto"
-                fill="white" font-size="9.5" font-weight="600" font-family="Inter, sans-serif">Motion</text>
-        </g>
-
-        <!-- Spacecraft Nav -->
-        <g class="cnode" data-id="spacecraft" data-href="{{ '/projects/los/' | relative_url }}">
-          <title>Spacecraft Rendezvous,Safe Control</title>
-          <circle cx="608" cy="220" r="30" fill="#6366f1" opacity="0.88"/>
-          <text x="608" y="216" text-anchor="middle" dominant-baseline="auto"
-                fill="white" font-size="9" font-weight="600" font-family="Inter, sans-serif">Spacecraft</text>
-          <text x="608" y="228" text-anchor="middle" dominant-baseline="auto"
-                fill="white" font-size="9" font-weight="600" font-family="Inter, sans-serif">Nav</text>
-        </g>
-
-      </svg>
-
-      <!-- Legend -->
-      <div class="constellation-legend">
-        <span class="legend-item"><span class="legend-dot" style="background:#0d9488"></span>Swarm Intelligence</span>
-        <span class="legend-item"><span class="legend-dot" style="background:#4338ca"></span>Safe Control</span>
-        <span class="legend-item"><span class="legend-dot" style="background:#7c3aed"></span>Formal Methods</span>
-        <span class="legend-item"><span class="legend-dot" style="background:#059669"></span>Bio-inspired</span>
-        <span style="font-size:0.68rem;color:var(--text-3);margin-left:auto;">Hover to explore · Click to read</span>
-      </div>
     </div>
 
     <p class="about__vision">
@@ -212,9 +154,12 @@ title: Himani Sinhmar
       <div class="project-item">
 
         <div class="project-item__media">
-          {% if project.images[0] %}
-            <img src="{{ project.images[0] | prepend: '/img/' | relative_url }}"
-                 alt="{{ project.title }}">
+          {% if project.videos[0] %}
+            <video autoplay loop muted playsinline>
+              <source src="{{ project.videos[0] | prepend: '/media/' | relative_url }}" type="video/mp4">
+            </video>
+          {% elsif project.images[0] %}
+            <img src="{{ project.images[0] | prepend: '/img/' | relative_url }}" alt="{{ project.title }}">
           {% endif %}
         </div>
 
@@ -419,6 +364,7 @@ title: Himani Sinhmar
     panels.forEach(p => p.classList.toggle('active', p.id === 'tab-' + id));
     history.replaceState(null, '', '#' + id);
   }
+  window.switchTabGlobal = switchTab;
 
   tabs.forEach(t => t.addEventListener('click', () => switchTab(t.dataset.tab)));
 
