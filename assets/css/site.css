@@ -200,6 +200,22 @@ a:hover { text-decoration: underline; }
 }
 .theme-section__label:hover { opacity: 0.85; }
 
+.theme-section--solo .theme-section__videos {
+  grid-template-columns: 1fr;
+}
+
+.theme-section--solo .vid-wrap {
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.theme-section--solo .vid-wrap video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #000;
+}
+
 .theme-section__videos {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

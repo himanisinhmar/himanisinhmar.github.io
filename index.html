@@ -87,6 +87,7 @@ title: Himani Sinhmar
 
       {% assign pauseIcon = '<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>' %}
 
+      <!-- Row 1: multi-video themes side by side -->
       <div class="theme-section">
         <span class="theme-section__label" style="background:#4f46e5" onclick="goToTheme('theme-neuromorphic')">Neuromorphic Decision Dynamics and Control</span>
         <div class="theme-section__videos">
@@ -100,16 +101,6 @@ title: Himani Sinhmar
           </div>
           <div class="vid-wrap" onclick="location.href='{{ '/projects/03_multi_robot_navigation' | relative_url }}'">
             <video autoplay muted loop playsinline><source src="{{ '/media/hardware_video.mp4' | relative_url }}" type="video/mp4"></video>
-            <button class="vid-ctrl" onclick="event.stopPropagation();toggleVid(this)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg></button>
-          </div>
-        </div>
-      </div>
-
-      <div class="theme-section">
-        <span class="theme-section__label" style="background:#0369a1" onclick="goToTheme('theme-motion')">Motion Planning and Control</span>
-        <div class="theme-section__videos">
-          <div class="vid-wrap" onclick="location.href='{{ '/projects/05_aerial_motion_planning' | relative_url }}'">
-            <video autoplay muted loop playsinline><source src="{{ '/media/merl.mp4' | relative_url }}" type="video/mp4"></video>
             <button class="vid-ctrl" onclick="event.stopPropagation();toggleVid(this)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg></button>
           </div>
         </div>
@@ -137,7 +128,18 @@ title: Himani Sinhmar
         </div>
       </div>
 
-      <div class="theme-section">
+      <!-- Row 2: single-video themes, enlarged to fill their section -->
+      <div class="theme-section theme-section--solo">
+        <span class="theme-section__label" style="background:#0369a1" onclick="goToTheme('theme-motion')">Motion Planning and Control</span>
+        <div class="theme-section__videos">
+          <div class="vid-wrap" onclick="location.href='{{ '/projects/05_aerial_motion_planning' | relative_url }}'">
+            <video autoplay muted loop playsinline><source src="{{ '/media/merl.mp4' | relative_url }}" type="video/mp4"></video>
+            <button class="vid-ctrl" onclick="event.stopPropagation();toggleVid(this)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="theme-section theme-section--solo">
         <span class="theme-section__label" style="background:#7c3aed" onclick="goToTheme('theme-tamp')">Task and Motion Planning</span>
         <div class="theme-section__videos">
           <div class="vid-wrap" onclick="location.href='{{ '/projects/04_tamp' | relative_url }}'">
