@@ -55,83 +55,86 @@ title: Himani Sinhmar
        ABOUT
   ═══════════════════════════════════════════════════════ -->
   <section class="tab-panel active" id="tab-about">
+    <div class="about-columns">
 
-    <p class="about__vision">
-      I am a Postdoctoral Research Associate at Princeton University working on robotics, control theory, neuromorphic decision-making, and game theory. I study how robots can make fast, reliable decisions and coordinate in challenging real-world environments using only local sensing and minimal onboard resources. My work develops decentralized frameworks for multi-agent systems that operate without GPS, WiFi, explicit communication, or centralized coordination. Instead of relying on long-horizon optimization or repeated replanning, I am interested in continuous adaptation through dynamical interaction rules, where safe and coordinated collective behavior emerges online from local information. More broadly, my research explores how these mechanisms can support scalable environment monitoring and autonomous operation in the wild.
-    </p>
+      <!-- LEFT: bio text -->
+      <div class="about-left">
+        <p class="about__vision">
+          I am a Postdoctoral Research Associate at Princeton University working on robotics, control theory, neuromorphic decision-making, and game theory. I study how robots can make fast, reliable decisions and coordinate in challenging real-world environments using only local sensing and minimal onboard resources. My work develops decentralized frameworks for multi-agent systems that operate without GPS, WiFi, explicit communication, or centralized coordination. Instead of relying on long-horizon optimization or repeated replanning, I am interested in continuous adaptation through dynamical interaction rules, where safe and coordinated collective behavior emerges online from local information. More broadly, my research explores how these mechanisms can support scalable environment monitoring and autonomous operation in the wild.
+        </p>
+        <p class="about__vision">
+          I am currently working with
+          <a href="https://naomi.princeton.edu/research-group/profile/">Prof. Naomi Leonard</a>
+          at Princeton. I did my PhD at Cornell University with
+          <a href="https://www.verifiablerobotics.com/people/">Prof. Hadas Kress-Gazit</a>,
+          and my Bachelor's and Master's in Aerospace Engineering at
+          <a href="https://www.iitb.ac.in/">IIT Bombay</a>.
+          I have also collaborated with the
+          <a href="https://cohengroup.lassp.cornell.edu/">Cohen Group</a> and
+          <a href="https://nlabbottcornell.weebly.com/">Laboratory for Molecular Engineering</a>
+          on <a href="https://www.nature.com/articles/s41563-024-02007-7">autonomous micron-scale origami robots</a>.
+        </p>
+        <p class="about__vision">
+          Outside of work I run, hike, and read — mostly about world affairs, human psychology, and philosophy of science.
+        </p>
+      </div>
 
-    <!-- Research Theme Cards -->
-    <div class="theme-grid">
+      <!-- RIGHT: research theme cards -->
+      <div class="theme-grid">
 
-      <a class="theme-card" href="{{ '/#research' | relative_url }}" onclick="switchTabGlobal('research');return false;">
-        <video class="theme-card__bg" autoplay loop muted playsinline>
-          <source src="{{ '/media/phd_square.mp4' | relative_url }}" type="video/mp4">
-        </video>
-        <div class="theme-card__overlay" style="--tc: #0d9488">
-          <div class="theme-card__name">Collective Intelligence</div>
-          <div class="theme-card__chips">
-            <span class="theme-chip">Minimalist Swarms</span>
-            <span class="theme-chip">Shape-Morphing MetaBots</span>
+        <a class="theme-card" href="{{ '/#research' | relative_url }}" onclick="switchTabGlobal('research');return false;">
+          <video class="theme-card__bg" autoplay loop muted playsinline>
+            <source src="{{ '/media/phd_square.mp4' | relative_url }}" type="video/mp4">
+          </video>
+          <div class="theme-card__overlay">
+            <div class="theme-card__name">Collective Intelligence</div>
+            <div class="theme-card__chips">
+              <span class="theme-chip">Minimalist Swarms</span>
+              <span class="theme-chip">Shape-Morphing MetaBots</span>
+            </div>
           </div>
-        </div>
-      </a>
+        </a>
 
-      <a class="theme-card" href="{{ '/#research' | relative_url }}" onclick="switchTabGlobal('research');return false;">
-        <video class="theme-card__bg" autoplay loop muted playsinline>
-          <source src="{{ '/media/env-moni.mp4' | relative_url }}" type="video/mp4">
-        </video>
-        <div class="theme-card__overlay" style="--tc: #4f46e5">
-          <div class="theme-card__name">Neuromorphic Decision Dynamics</div>
-          <div class="theme-card__chips">
-            <span class="theme-chip">Environment Monitoring</span>
-            <span class="theme-chip">Multi-Robot Navigation</span>
+        <a class="theme-card" href="{{ '/#research' | relative_url }}" onclick="switchTabGlobal('research');return false;">
+          <video class="theme-card__bg" autoplay loop muted playsinline>
+            <source src="{{ '/media/env-moni.mp4' | relative_url }}" type="video/mp4">
+          </video>
+          <div class="theme-card__overlay">
+            <div class="theme-card__name">Neuromorphic Decision Dynamics</div>
+            <div class="theme-card__chips">
+              <span class="theme-chip">Environment Monitoring</span>
+              <span class="theme-chip">Multi-Robot Navigation</span>
+            </div>
           </div>
-        </div>
-      </a>
+        </a>
 
-      <a class="theme-card" href="{{ '/#research' | relative_url }}" onclick="switchTabGlobal('research');return false;">
-        <video class="theme-card__bg" autoplay loop muted playsinline>
-          <source src="{{ '/media/tamp-hardware.mp4' | relative_url }}" type="video/mp4">
-        </video>
-        <div class="theme-card__overlay" style="--tc: #7c3aed">
-          <div class="theme-card__name">Task and Motion Planning</div>
-          <div class="theme-card__chips">
-            <span class="theme-chip">Affordance-Aware TAMP</span>
+        <a class="theme-card" href="{{ '/#research' | relative_url }}" onclick="switchTabGlobal('research');return false;">
+          <video class="theme-card__bg" autoplay loop muted playsinline>
+            <source src="{{ '/media/tamp-hardware.mp4' | relative_url }}" type="video/mp4">
+          </video>
+          <div class="theme-card__overlay">
+            <div class="theme-card__name">Task and Motion Planning</div>
+            <div class="theme-card__chips">
+              <span class="theme-chip">Affordance-Aware TAMP</span>
+            </div>
           </div>
-        </div>
-      </a>
+        </a>
 
-      <a class="theme-card" href="{{ '/#research' | relative_url }}" onclick="switchTabGlobal('research');return false;">
-        <video class="theme-card__bg" autoplay loop muted playsinline>
-          <source src="{{ '/media/merl.mp4' | relative_url }}" type="video/mp4">
-        </video>
-        <div class="theme-card__overlay" style="--tc: #0369a1">
-          <div class="theme-card__name">Motion Planning and Control</div>
-          <div class="theme-card__chips">
-            <span class="theme-chip">UAV Motion Planning</span>
-            <span class="theme-chip">Aerospace Systems</span>
+        <a class="theme-card" href="{{ '/#research' | relative_url }}" onclick="switchTabGlobal('research');return false;">
+          <video class="theme-card__bg" autoplay loop muted playsinline>
+            <source src="{{ '/media/merl.mp4' | relative_url }}" type="video/mp4">
+          </video>
+          <div class="theme-card__overlay">
+            <div class="theme-card__name">Motion Planning and Control</div>
+            <div class="theme-card__chips">
+              <span class="theme-chip">UAV Motion Planning</span>
+              <span class="theme-chip">Aerospace Systems</span>
+            </div>
           </div>
-        </div>
-      </a>
+        </a>
 
-    </div>
-
-    <p class="about__vision">
-      I am currently working with
-      <a href="https://naomi.princeton.edu/research-group/profile/">Prof. Naomi Leonard</a>
-      at Princeton. I did my PhD at Cornell University with
-      <a href="https://www.verifiablerobotics.com/people/">Prof. Hadas Kress-Gazit</a>,
-      and my Bachelor's and Master's in Aerospace Engineering at
-      <a href="https://www.iitb.ac.in/">IIT Bombay</a>.
-      I have also collaborated with the
-      <a href="https://cohengroup.lassp.cornell.edu/">Cohen Group</a> and
-      <a href="https://nlabbottcornell.weebly.com/">Laboratory for Molecular Engineering</a>
-      on <a href="https://www.nature.com/articles/s41563-024-02007-7">autonomous micron-scale origami robots</a>.
-    </p>
-    <p class="about__vision">
-      Outside of work I run, hike, and read — mostly about world affairs, human psychology, and philosophy of science.
-    </p>
-
+      </div><!-- /theme-grid -->
+    </div><!-- /about-columns -->
   </section>
 
   <!-- ══════════════════════════════════════════════════════
