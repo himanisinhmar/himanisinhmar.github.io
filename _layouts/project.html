@@ -28,14 +28,14 @@ layout: bare
       {% assign vid_count = page.videos | size %}
       {% if vid_count == 1 %}
         <div class="proj__gallery proj__gallery--single">
-          <video autoplay loop muted playsinline>
+          <video autoplay loop muted playsinline controls>
             <source src="{{ '/media/' | append: page.videos[0] | relative_url }}" type="video/mp4">
           </video>
         </div>
       {% else %}
         <div class="proj__gallery proj__gallery--multi">
           {% for v in page.videos %}
-            <video autoplay loop muted playsinline>
+            <video autoplay loop muted playsinline controls>
               <source src="{{ '/media/' | append: v | relative_url }}" type="video/mp4">
             </video>
           {% endfor %}

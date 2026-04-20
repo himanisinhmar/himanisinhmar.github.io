@@ -60,7 +60,7 @@ title: Himani Sinhmar
       <!-- LEFT: bio text -->
       <div class="about-left">
         <p class="about__vision">
-          I am a Postdoctoral Research Associate at Princeton University working on robotics, control theory, neuromorphic decision-making, and game theory. I study how robots can make fast, reliable decisions and coordinate in challenging real-world environments using only local sensing and minimal onboard resources. My work develops decentralized frameworks for multi-agent systems that operate without GPS, WiFi, explicit communication, or centralized coordination. Instead of relying on long-horizon optimization or repeated replanning, I am interested in continuous adaptation through dynamical interaction rules, where safe and coordinated collective behavior emerges online from local information. More broadly, my research explores how these mechanisms can support scalable environment monitoring and autonomous operation in the wild.
+          I am a Postdoctoral Research Associate at Princeton University, where I work on robotics, control theory, neuromorphic decision-making, and game theory. I study how robot teams can make fast, reliable decisions and coordinate safely in uncertain, dynamic, and social environments using only local information, with no centralization or explicit communication. My work focuses on decentralized control and continuous adaptation, where collective behavior emerges in real-time through local dynamical interaction for autonomous operation in the wild.
         </p>
         <p class="about__vision">
           I am currently working with
@@ -75,7 +75,7 @@ title: Himani Sinhmar
           on <a href="https://www.nature.com/articles/s41563-024-02007-7">autonomous micron-scale origami robots</a>.
         </p>
         <p class="about__vision">
-          Outside of work I run, hike, and read — mostly about world affairs, human psychology, and philosophy of science.
+          Outside of research, I enjoy running, hiking, and reading about world affairs, psychology, and philosophy of science.
         </p>
       </div>
 
@@ -83,57 +83,115 @@ title: Himani Sinhmar
       <div class="theme-sections">
 
         <div class="theme-section">
-          <span class="theme-section__label" style="background:#0d9488">Collective Intelligence</span>
-          <div class="theme-section__videos">
-            <video controls muted loop playsinline>
-              <source src="{{ '/media/phd_square.mp4' | relative_url }}" type="video/mp4">
-            </video>
-            <video controls muted loop playsinline>
-              <source src="{{ '/media/sheetRobot.mp4' | relative_url }}" type="video/mp4">
-            </video>
-            <video controls muted loop playsinline>
-              <source src="{{ '/media/locomtion_sim.mp4' | relative_url }}" type="video/mp4">
-            </video>
-            <video controls muted loop playsinline>
-              <source src="{{ '/media/locomtion_exp.mp4' | relative_url }}" type="video/mp4">
-            </video>
-          </div>
-        </div>
-
-        <div class="theme-section">
           <span class="theme-section__label" style="background:#4f46e5">Neuromorphic Decision Dynamics and Control</span>
           <div class="theme-section__videos">
-            <video controls muted loop playsinline>
-              <source src="{{ '/media/env-moni.mp4' | relative_url }}" type="video/mp4">
-            </video>
-            <video controls muted loop playsinline>
-              <source src="{{ '/media/env.mp4' | relative_url }}" type="video/mp4">
-            </video>
-            <video controls muted loop playsinline>
-              <source src="{{ '/media/decision.mp4' | relative_url }}" type="video/mp4">
-            </video>
-            <video controls muted loop playsinline>
-              <source src="{{ '/media/hardware_video.mp4' | relative_url }}" type="video/mp4">
-            </video>
-          </div>
-        </div>
-
-        <div class="theme-section">
-          <span class="theme-section__label" style="background:#7c3aed">Task and Motion Planning</span>
-          <div class="theme-section__videos">
-            <video controls muted loop playsinline>
-              <source src="{{ '/media/tamp-hardware.mp4' | relative_url }}" type="video/mp4">
-            </video>
+            <div class="vid-wrap" onclick="switchTabGlobal('research')">
+              <video autoplay muted loop playsinline>
+                <source src="{{ '/media/env-moni.mp4' | relative_url }}" type="video/mp4">
+              </video>
+              <button class="vid-ctrl" onclick="event.stopPropagation();toggleVid(this)">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+              </button>
+            </div>
+            <div class="vid-wrap" onclick="switchTabGlobal('research')">
+              <video autoplay muted loop playsinline>
+                <source src="{{ '/media/env.mp4' | relative_url }}" type="video/mp4">
+              </video>
+              <button class="vid-ctrl" onclick="event.stopPropagation();toggleVid(this)">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+              </button>
+            </div>
+            <div class="vid-wrap" onclick="switchTabGlobal('research')">
+              <video autoplay muted loop playsinline>
+                <source src="{{ '/media/decision.mp4' | relative_url }}" type="video/mp4">
+              </video>
+              <button class="vid-ctrl" onclick="event.stopPropagation();toggleVid(this)">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+              </button>
+            </div>
+            <div class="vid-wrap" onclick="switchTabGlobal('research')">
+              <video autoplay muted loop playsinline>
+                <source src="{{ '/media/hardware_video.mp4' | relative_url }}" type="video/mp4">
+              </video>
+              <button class="vid-ctrl" onclick="event.stopPropagation();toggleVid(this)">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+              </button>
+            </div>
           </div>
         </div>
 
         <div class="theme-section">
           <span class="theme-section__label" style="background:#0369a1">Motion Planning and Control</span>
           <div class="theme-section__videos">
-            <video controls muted loop playsinline>
-              <source src="{{ '/media/merl.mp4' | relative_url }}" type="video/mp4">
-            </video>
+            <div class="vid-wrap" onclick="switchTabGlobal('research')">
+              <video autoplay muted loop playsinline>
+                <source src="{{ '/media/merl.mp4' | relative_url }}" type="video/mp4">
+              </video>
+              <button class="vid-ctrl" onclick="event.stopPropagation();toggleVid(this)">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+              </button>
+            </div>
           </div>
+        </div>
+
+        <div class="theme-section">
+          <span class="theme-section__label" style="background:#0d9488">Collective Intelligence</span>
+          <div class="theme-section__videos">
+            <div class="vid-wrap" onclick="switchTabGlobal('research')">
+              <video autoplay muted loop playsinline>
+                <source src="{{ '/media/phd_square.mp4' | relative_url }}" type="video/mp4">
+              </video>
+              <button class="vid-ctrl" onclick="event.stopPropagation();toggleVid(this)">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+              </button>
+            </div>
+            <div class="vid-wrap" onclick="switchTabGlobal('research')">
+              <video autoplay muted loop playsinline>
+                <source src="{{ '/media/sheetRobot.mp4' | relative_url }}" type="video/mp4">
+              </video>
+              <button class="vid-ctrl" onclick="event.stopPropagation();toggleVid(this)">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+              </button>
+            </div>
+            <div class="vid-wrap" onclick="switchTabGlobal('research')">
+              <video autoplay muted loop playsinline>
+                <source src="{{ '/media/locomtion_sim.mp4' | relative_url }}" type="video/mp4">
+              </video>
+              <button class="vid-ctrl" onclick="event.stopPropagation();toggleVid(this)">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+              </button>
+            </div>
+            <div class="vid-wrap" onclick="switchTabGlobal('research')">
+              <video autoplay muted loop playsinline>
+                <source src="{{ '/media/locomtion_exp.mp4' | relative_url }}" type="video/mp4">
+              </video>
+              <button class="vid-ctrl" onclick="event.stopPropagation();toggleVid(this)">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="theme-section">
+          <span class="theme-section__label" style="background:#7c3aed">Task and Motion Planning</span>
+          <div class="theme-section__videos">
+            <div class="vid-wrap" onclick="switchTabGlobal('research')">
+              <video autoplay muted loop playsinline>
+                <source src="{{ '/media/tamp-hardware.mp4' | relative_url }}" type="video/mp4">
+              </video>
+              <button class="vid-ctrl" onclick="event.stopPropagation();toggleVid(this)">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="theme-section">
+          <span class="theme-section__label" style="background:#0369a1">Aerospace Systems and Control</span>
+          <p style="font-size:0.78rem;color:var(--text-3);margin-top:0.3rem;">
+            Distributed spacecraft coordination, relative navigation, propulsion modeling.
+            <a href="{{ '/projects/07_aerospace' | relative_url }}" style="color:var(--accent)">Details →</a>
+          </p>
         </div>
 
       </div><!-- /theme-sections -->
@@ -364,6 +422,15 @@ title: Himani Sinhmar
   // ── Tab switching ──
   const tabs   = Array.from(document.querySelectorAll('.tab'));
   const panels = Array.from(document.querySelectorAll('.tab-panel'));
+
+  // ── Video hover toggle ──
+  window.toggleVid = function(btn) {
+    const video = btn.closest('.vid-wrap').querySelector('video');
+    const pauseIcon = '<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>';
+    const playIcon  = '<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>';
+    if (video.paused) { video.play(); btn.innerHTML = pauseIcon; }
+    else              { video.pause(); btn.innerHTML = playIcon; }
+  };
 
   function switchTab(id) {
     tabs.forEach(t =>   t.classList.toggle('active', t.dataset.tab === id));

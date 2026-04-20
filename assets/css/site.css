@@ -213,6 +213,46 @@ a:hover { text-decoration: underline; }
   background: #000;
 }
 
+/* ── VIDEO HOVER OVERLAY ── */
+.vid-wrap {
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.vid-wrap video {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: #000;
+}
+
+.vid-ctrl {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 38px;
+  height: 38px;
+  background: rgba(0,0,0,0.55);
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.18s;
+  pointer-events: none;
+}
+
+.vid-wrap:hover .vid-ctrl {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 /* ── RESEARCH THEME CARDS ── */
 .theme-grid {
   display: grid;
@@ -556,30 +596,49 @@ a:hover { text-decoration: underline; }
 
 .proj__gallery { margin-bottom: 1.5rem; }
 
-.proj__gallery--single img,
-.proj__gallery--single video {
+.proj__gallery--single {
+  max-width: 700px;
+}
+
+.proj__gallery--single img {
   width: 100%;
-  max-height: 300px;
-  object-fit: cover;
+  height: auto;
   border-radius: 6px;
   border: 1px solid var(--border);
   display: block;
 }
 
+.proj__gallery--single video {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  display: block;
+  background: #000;
+}
+
 .proj__gallery--multi {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 0.6rem;
 }
 
-.proj__gallery--multi img,
-.proj__gallery--multi video {
+.proj__gallery--multi img {
   width: 100%;
   height: 160px;
   object-fit: cover;
   border-radius: 6px;
   border: 1px solid var(--border);
   display: block;
+}
+
+.proj__gallery--multi video {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  display: block;
+  background: #000;
 }
 
 .proj__video { margin-bottom: 1.5rem; }
