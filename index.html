@@ -210,59 +210,48 @@ title: Himani Sinhmar
       </p>
     </div>
 
-    <div class="section-label">Projects</div>
-    <div class="project-list">
+    {% assign sorted_projects = site.projects | sort: 'sort_order' %}
+    {% assign themes_order = "Neuromorphic Decision Dynamics and Control,Motion Planning and Control,Collective Intelligence,Task and Motion Planning" | split: "," %}
 
-      {% for project in site.projects %}
-      {% unless project.path contains 'nonlinear' or project.path contains 'ramjet' or project.path contains 'imu' %}
-      <div class="project-item">
-
-        <div class="project-item__media">
-          {% if project.videos[0] %}
-            <video controls muted loop playsinline>
-              <source src="{{ project.videos[0] | prepend: '/media/' | relative_url }}" type="video/mp4">
-            </video>
-          {% elsif project.images[0] %}
-            <img src="{{ project.images[0] | prepend: '/img/' | relative_url }}" alt="{{ project.title }}">
-          {% endif %}
-        </div>
-
-        <div class="project-item__body">
-          {% if project.theme %}
-            <span class="project-item__tag"
-                  style="background:{{ project.theme_color | default: '#0d9488' }}">
-              {{ project.theme }}
-            </span>
-          {% endif %}
-
-          <a class="project-item__title" href="{{ project.url | relative_url }}">
-            {{ project.title }}
-          </a>
-
-          <p class="project-item__synopsis">
-            {% if project.tagline %}{{ project.tagline }}
-            {% else %}{{ project.content | strip_html | truncatewords: 40 }}{% endif %}
-          </p>
-
-          <div class="project-item__links">
-            <a class="plink plink--primary" href="{{ project.url | relative_url }}">Details →</a>
-            {% unless project.report == "To Come" or project.report == nil %}
-              <a class="plink" href="{{ '/pdf/' | append: project.report | relative_url }}" target="_blank">Paper</a>
-            {% endunless %}
-            {% if project.code %}
-              <a class="plink" href="{{ project.code }}" target="_blank">Code</a>
-            {% endif %}
-            {% if project.video or project.youtube_id %}
-              <a class="plink" href="{{ project.url | relative_url }}">Video</a>
-            {% endif %}
+    {% for theme_name in themes_order %}
+      {% assign theme_projects = sorted_projects | where: "theme", theme_name %}
+      {% if theme_projects.size > 0 %}
+        {% assign theme_color = theme_projects[0].theme_color | default: '#0d9488' %}
+        <div class="project-theme-group">
+          <span class="section-label" style="background:{{ theme_color }}">{{ theme_name }}</span>
+          <div class="project-grid">
+            {% for project in theme_projects %}
+            <div class="project-card">
+              <div class="project-card__media">
+                {% if project.videos[0] %}
+                  <video autoplay muted loop playsinline>
+                    <source src="{{ project.videos[0] | prepend: '/media/' | relative_url }}" type="video/mp4">
+                  </video>
+                {% elsif project.images[0] %}
+                  <img src="{{ project.images[0] | prepend: '/img/' | relative_url }}" alt="{{ project.title }}">
+                {% endif %}
+              </div>
+              <div class="project-card__body">
+                <a class="project-card__title" href="{{ project.url | relative_url }}">{{ project.title }}</a>
+                <p class="project-card__synopsis">
+                  {% if project.tagline %}{{ project.tagline }}{% else %}{{ project.content | strip_html | truncatewords: 30 }}{% endif %}
+                </p>
+                <div class="project-card__links">
+                  <a class="plink plink--primary" href="{{ project.url | relative_url }}">Details →</a>
+                  {% for p in project.papers %}
+                    <a class="plink" href="{{ '/pdf/' | append: p.pdf | relative_url }}" target="_blank">{{ p.label }}</a>
+                  {% endfor %}
+                  {% if project.code %}
+                    <a class="plink" href="{{ project.code }}" target="_blank">Code</a>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+            {% endfor %}
           </div>
         </div>
-
-      </div>
-      {% endunless %}
-      {% endfor %}
-
-    </div><!-- /project-list -->
+      {% endif %}
+    {% endfor %}
   </section>
 
   <!-- ══════════════════════════════════════════════════════

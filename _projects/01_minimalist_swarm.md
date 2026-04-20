@@ -3,6 +3,7 @@ layout: project
 title: "Minimalist Robotic Swarms for Target Encapsulation"
 theme: "Collective Intelligence"
 theme_color: "#0d9488"
+sort_order: 5
 tagline: "Provably correct decentralized control for robot swarms with no memory, no communication, and no localization."
 videos:
   - phd_square.mp4

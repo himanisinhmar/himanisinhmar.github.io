@@ -3,6 +3,7 @@ layout: project
 title: "Affordance-Aware Task and Motion Planning"
 theme: "Task and Motion Planning"
 theme_color: "#7c3aed"
+sort_order: 7
 tagline: "Reactive task and motion planning using object affordances, feasibility checks, and tool substitution — demonstrated on a Stretch robot."
 videos:
   - tamp-hardware.mp4

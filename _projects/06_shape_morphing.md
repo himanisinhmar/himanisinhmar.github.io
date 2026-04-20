@@ -3,6 +3,7 @@ layout: project
 title: "Electronically Programmable Shape-Morphing MetaBots"
 theme: "Collective Intelligence"
 theme_color: "#0d9488"
+sort_order: 6
 tagline: "Micrometer-scale origami robots that fold into 3D shapes, locomote in solution, and are controlled by surface electrochemical actuators."
 videos:
   - sheetRobot.mp4

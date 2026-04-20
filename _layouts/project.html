@@ -24,36 +24,29 @@ layout: bare
       {% endif %}
     </header>
 
-    {% if page.videos %}
-      {% assign vid_count = page.videos | size %}
-      {% if vid_count == 1 %}
-        <div class="proj__gallery proj__gallery--single">
-          <video autoplay loop muted playsinline controls>
-            <source src="{{ '/media/' | append: page.videos[0] | relative_url }}" type="video/mp4">
-          </video>
-        </div>
-      {% else %}
-        <div class="proj__gallery proj__gallery--multi">
+    <div class="proj__body">
+
+      <div class="proj__content">
+        {{ content }}
+      </div>
+
+      {% if page.videos or page.youtube_id %}
+        <div class="proj__media">
           {% for v in page.videos %}
             <video autoplay loop muted playsinline controls>
               <source src="{{ '/media/' | append: v | relative_url }}" type="video/mp4">
             </video>
           {% endfor %}
+          {% if page.youtube_id %}
+            <div class="proj__video">
+              <iframe src="https://www.youtube-nocookie.com/embed/{{ page.youtube_id }}"
+                      frameborder="0" allowfullscreen>
+              </iframe>
+            </div>
+          {% endif %}
         </div>
       {% endif %}
-    {% endif %}
 
-    {% if page.youtube_id %}
-      <div class="proj__video">
-        <iframe src="https://www.youtube-nocookie.com/embed/{{ page.youtube_id }}"
-                frameborder="0" allowfullscreen
-                style="width:100%;aspect-ratio:16/9;border-radius:6px;display:block;">
-        </iframe>
-      </div>
-    {% endif %}
-
-    <div class="proj__content">
-      {{ content }}
     </div>
 
   </article>

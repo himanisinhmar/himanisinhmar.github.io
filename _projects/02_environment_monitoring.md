@@ -3,6 +3,7 @@ layout: project
 title: "Environment Monitoring in the Wild"
 theme: "Neuromorphic Decision Dynamics and Control"
 theme_color: "#4f46e5"
+sort_order: 1
 tagline: "Decentralized, game-theoretic, and neuromorphic control for scalable environment monitoring in resource-constrained robot teams."
 videos:
   - env-moni.mp4

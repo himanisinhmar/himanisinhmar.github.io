@@ -3,6 +3,7 @@ layout: project
 title: "Aerospace Systems and Control"
 theme: "Motion Planning and Control"
 theme_color: "#0369a1"
+sort_order: 4
 tagline: "Control, estimation, and modeling for distributed spacecraft systems, autonomous navigation, and propulsion."
 papers:
   - label: "CEAS GNC"

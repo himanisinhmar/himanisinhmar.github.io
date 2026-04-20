@@ -3,6 +3,7 @@ layout: project
 title: "Provably Safe Motion Planning for Resource-Constrained UAVs"
 theme: "Motion Planning and Control"
 theme_color: "#0369a1"
+sort_order: 3
 tagline: "Provably safe aerial motion planning under uncertainty, limited computation, and complex workspace constraints."
 videos:
   - merl.mp4
