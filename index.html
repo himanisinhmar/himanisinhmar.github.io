@@ -3,6 +3,10 @@ layout: bare
 title: Himani Sinhmar
 ---
 
+<button id="dark-toggle" class="dark-toggle" aria-label="Toggle dark mode">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z"/></svg>
+</button>
+
 <div class="site">
 
   <!-- ══════════════════════════════════════════════════════
@@ -55,147 +59,95 @@ title: Himani Sinhmar
        ABOUT
   ═══════════════════════════════════════════════════════ -->
   <section class="tab-panel active" id="tab-about">
-    <div class="about-columns">
 
-      <!-- LEFT: bio text -->
-      <div class="about-left">
-        <p class="about__vision">
-          I am a Postdoctoral Research Associate at Princeton University, where I work on robotics, control theory, neuromorphic decision-making, and game theory. I study how robot teams can make fast, reliable decisions and coordinate safely in uncertain, dynamic, and social environments using only local information, with no centralization or explicit communication. My work focuses on decentralized control and continuous adaptation, where collective behavior emerges in real-time through local dynamical interaction for autonomous operation in the wild.
-        </p>
-        <p class="about__vision">
-          I am currently working with
-          <a href="https://naomi.princeton.edu/research-group/profile/">Prof. Naomi Leonard</a>
-          at Princeton. I did my PhD at Cornell University with
-          <a href="https://www.verifiablerobotics.com/people/">Prof. Hadas Kress-Gazit</a>,
-          and my Bachelor's and Master's in Aerospace Engineering at
-          <a href="https://www.iitb.ac.in/">IIT Bombay</a>.
-          I have also collaborated with the
-          <a href="https://cohengroup.lassp.cornell.edu/">Cohen Group</a> and
-          <a href="https://nlabbottcornell.weebly.com/">Laboratory for Molecular Engineering</a>
-          on <a href="https://www.nature.com/articles/s41563-024-02007-7">autonomous micron-scale origami robots</a>.
-        </p>
-        <p class="about__vision">
-          Outside of research, I enjoy running, hiking, and reading about world affairs, psychology, and philosophy of science.
-        </p>
+    <!-- Bio text on top, full width -->
+    <div class="about-text">
+      <p class="about__vision">
+        I am a Postdoctoral Research Associate at Princeton University, where I work on robotics, control theory, neuromorphic decision-making, and game theory. I study how robot teams can make fast, reliable decisions and coordinate safely in uncertain, dynamic, and social environments using only local information, with no centralization or explicit communication. My work focuses on decentralized control and continuous adaptation, where collective behavior emerges in real-time through local dynamical interaction for autonomous operation in the wild.
+      </p>
+      <p class="about__vision">
+        I am currently working with
+        <a href="https://naomi.princeton.edu/research-group/profile/">Prof. Naomi Leonard</a>
+        at Princeton. I did my PhD at Cornell University with
+        <a href="https://www.verifiablerobotics.com/people/">Prof. Hadas Kress-Gazit</a>,
+        and my Bachelor's and Master's in Aerospace Engineering at
+        <a href="https://www.iitb.ac.in/">IIT Bombay</a>.
+        I have also collaborated with the
+        <a href="https://cohengroup.lassp.cornell.edu/">Cohen Group</a> and
+        <a href="https://nlabbottcornell.weebly.com/">Laboratory for Molecular Engineering</a>
+        on <a href="https://www.nature.com/articles/s41563-024-02007-7">autonomous micron-scale origami robots</a>.
+      </p>
+      <p class="about__vision">
+        Outside of research, I enjoy running, hiking, and reading about world affairs, psychology, and philosophy of science.
+      </p>
+    </div>
+
+    <!-- Theme sections — 2×2 grid, below the text -->
+    <div class="theme-sections">
+
+      {% assign pauseIcon = '<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>' %}
+
+      <div class="theme-section">
+        <span class="theme-section__label" style="background:#4f46e5" onclick="goToTheme('theme-neuromorphic')">Neuromorphic Decision Dynamics and Control</span>
+        <div class="theme-section__videos">
+          <div class="vid-wrap" onclick="location.href='{{ '/projects/02_environment_monitoring' | relative_url }}'">
+            <video autoplay muted loop playsinline><source src="{{ '/media/env-moni.mp4' | relative_url }}" type="video/mp4"></video>
+            <button class="vid-ctrl" onclick="event.stopPropagation();toggleVid(this)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg></button>
+          </div>
+          <div class="vid-wrap" onclick="location.href='{{ '/projects/03_multi_robot_navigation' | relative_url }}'">
+            <video autoplay muted loop playsinline><source src="{{ '/media/env.mp4' | relative_url }}" type="video/mp4"></video>
+            <button class="vid-ctrl" onclick="event.stopPropagation();toggleVid(this)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg></button>
+          </div>
+          <div class="vid-wrap" onclick="location.href='{{ '/projects/03_multi_robot_navigation' | relative_url }}'">
+            <video autoplay muted loop playsinline><source src="{{ '/media/hardware_video.mp4' | relative_url }}" type="video/mp4"></video>
+            <button class="vid-ctrl" onclick="event.stopPropagation();toggleVid(this)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg></button>
+          </div>
+        </div>
       </div>
 
-      <!-- RIGHT: research theme sections with all videos -->
-      <div class="theme-sections">
-
-        <div class="theme-section">
-          <span class="theme-section__label" style="background:#4f46e5">Neuromorphic Decision Dynamics and Control</span>
-          <div class="theme-section__videos">
-            <div class="vid-wrap" onclick="switchTabGlobal('research')">
-              <video autoplay muted loop playsinline>
-                <source src="{{ '/media/env-moni.mp4' | relative_url }}" type="video/mp4">
-              </video>
-              <button class="vid-ctrl" onclick="event.stopPropagation();toggleVid(this)">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
-              </button>
-            </div>
-            <div class="vid-wrap" onclick="switchTabGlobal('research')">
-              <video autoplay muted loop playsinline>
-                <source src="{{ '/media/env.mp4' | relative_url }}" type="video/mp4">
-              </video>
-              <button class="vid-ctrl" onclick="event.stopPropagation();toggleVid(this)">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
-              </button>
-            </div>
-            <div class="vid-wrap" onclick="switchTabGlobal('research')">
-              <video autoplay muted loop playsinline>
-                <source src="{{ '/media/decision.mp4' | relative_url }}" type="video/mp4">
-              </video>
-              <button class="vid-ctrl" onclick="event.stopPropagation();toggleVid(this)">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
-              </button>
-            </div>
-            <div class="vid-wrap" onclick="switchTabGlobal('research')">
-              <video autoplay muted loop playsinline>
-                <source src="{{ '/media/hardware_video.mp4' | relative_url }}" type="video/mp4">
-              </video>
-              <button class="vid-ctrl" onclick="event.stopPropagation();toggleVid(this)">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
-              </button>
-            </div>
+      <div class="theme-section">
+        <span class="theme-section__label" style="background:#0369a1" onclick="goToTheme('theme-motion')">Motion Planning and Control</span>
+        <div class="theme-section__videos">
+          <div class="vid-wrap" onclick="location.href='{{ '/projects/05_aerial_motion_planning' | relative_url }}'">
+            <video autoplay muted loop playsinline><source src="{{ '/media/merl.mp4' | relative_url }}" type="video/mp4"></video>
+            <button class="vid-ctrl" onclick="event.stopPropagation();toggleVid(this)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg></button>
           </div>
         </div>
+      </div>
 
-        <div class="theme-section">
-          <span class="theme-section__label" style="background:#0369a1">Motion Planning and Control</span>
-          <div class="theme-section__videos">
-            <div class="vid-wrap" onclick="switchTabGlobal('research')">
-              <video autoplay muted loop playsinline>
-                <source src="{{ '/media/merl.mp4' | relative_url }}" type="video/mp4">
-              </video>
-              <button class="vid-ctrl" onclick="event.stopPropagation();toggleVid(this)">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
-              </button>
-            </div>
+      <div class="theme-section">
+        <span class="theme-section__label" style="background:#0d9488" onclick="goToTheme('theme-collective')">Collective Intelligence</span>
+        <div class="theme-section__videos">
+          <div class="vid-wrap" onclick="location.href='{{ '/projects/01_minimalist_swarm' | relative_url }}'">
+            <video autoplay muted loop playsinline><source src="{{ '/media/phd_square.mp4' | relative_url }}" type="video/mp4"></video>
+            <button class="vid-ctrl" onclick="event.stopPropagation();toggleVid(this)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg></button>
+          </div>
+          <div class="vid-wrap" onclick="location.href='{{ '/projects/06_shape_morphing' | relative_url }}'">
+            <video autoplay muted loop playsinline><source src="{{ '/media/sheetRobot.mp4' | relative_url }}" type="video/mp4"></video>
+            <button class="vid-ctrl" onclick="event.stopPropagation();toggleVid(this)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg></button>
+          </div>
+          <div class="vid-wrap" onclick="location.href='{{ '/projects/06_shape_morphing' | relative_url }}'">
+            <video autoplay muted loop playsinline><source src="{{ '/media/locomtion_sim.mp4' | relative_url }}" type="video/mp4"></video>
+            <button class="vid-ctrl" onclick="event.stopPropagation();toggleVid(this)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg></button>
+          </div>
+          <div class="vid-wrap" onclick="location.href='{{ '/projects/06_shape_morphing' | relative_url }}'">
+            <video autoplay muted loop playsinline><source src="{{ '/media/locomtion_exp.mp4' | relative_url }}" type="video/mp4"></video>
+            <button class="vid-ctrl" onclick="event.stopPropagation();toggleVid(this)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg></button>
           </div>
         </div>
+      </div>
 
-        <div class="theme-section">
-          <span class="theme-section__label" style="background:#0d9488">Collective Intelligence</span>
-          <div class="theme-section__videos">
-            <div class="vid-wrap" onclick="switchTabGlobal('research')">
-              <video autoplay muted loop playsinline>
-                <source src="{{ '/media/phd_square.mp4' | relative_url }}" type="video/mp4">
-              </video>
-              <button class="vid-ctrl" onclick="event.stopPropagation();toggleVid(this)">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
-              </button>
-            </div>
-            <div class="vid-wrap" onclick="switchTabGlobal('research')">
-              <video autoplay muted loop playsinline>
-                <source src="{{ '/media/sheetRobot.mp4' | relative_url }}" type="video/mp4">
-              </video>
-              <button class="vid-ctrl" onclick="event.stopPropagation();toggleVid(this)">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
-              </button>
-            </div>
-            <div class="vid-wrap" onclick="switchTabGlobal('research')">
-              <video autoplay muted loop playsinline>
-                <source src="{{ '/media/locomtion_sim.mp4' | relative_url }}" type="video/mp4">
-              </video>
-              <button class="vid-ctrl" onclick="event.stopPropagation();toggleVid(this)">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
-              </button>
-            </div>
-            <div class="vid-wrap" onclick="switchTabGlobal('research')">
-              <video autoplay muted loop playsinline>
-                <source src="{{ '/media/locomtion_exp.mp4' | relative_url }}" type="video/mp4">
-              </video>
-              <button class="vid-ctrl" onclick="event.stopPropagation();toggleVid(this)">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
-              </button>
-            </div>
+      <div class="theme-section">
+        <span class="theme-section__label" style="background:#7c3aed" onclick="goToTheme('theme-tamp')">Task and Motion Planning</span>
+        <div class="theme-section__videos">
+          <div class="vid-wrap" onclick="location.href='{{ '/projects/04_tamp' | relative_url }}'">
+            <video autoplay muted loop playsinline><source src="{{ '/media/tamp-hardware.mp4' | relative_url }}" type="video/mp4"></video>
+            <button class="vid-ctrl" onclick="event.stopPropagation();toggleVid(this)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg></button>
           </div>
         </div>
+      </div>
 
-        <div class="theme-section">
-          <span class="theme-section__label" style="background:#7c3aed">Task and Motion Planning</span>
-          <div class="theme-section__videos">
-            <div class="vid-wrap" onclick="switchTabGlobal('research')">
-              <video autoplay muted loop playsinline>
-                <source src="{{ '/media/tamp-hardware.mp4' | relative_url }}" type="video/mp4">
-              </video>
-              <button class="vid-ctrl" onclick="event.stopPropagation();toggleVid(this)">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div class="theme-section">
-          <span class="theme-section__label" style="background:#0369a1">Aerospace Systems and Control</span>
-          <p style="font-size:0.78rem;color:var(--text-3);margin-top:0.3rem;">
-            Distributed spacecraft coordination, relative navigation, propulsion modeling.
-            <a href="{{ '/projects/07_aerospace' | relative_url }}" style="color:var(--accent)">Details →</a>
-          </p>
-        </div>
-
-      </div><!-- /theme-sections -->
-    </div><!-- /about-columns -->
+    </div><!-- /theme-sections -->
   </section>
 
   <!-- ══════════════════════════════════════════════════════
@@ -217,7 +169,14 @@ title: Himani Sinhmar
       {% assign theme_projects = sorted_projects | where: "theme", theme_name %}
       {% if theme_projects.size > 0 %}
         {% assign theme_color = theme_projects[0].theme_color | default: '#0d9488' %}
-        <div class="project-theme-group">
+        {% case theme_name %}
+          {% when "Neuromorphic Decision Dynamics and Control" %}{% assign theme_id = "theme-neuromorphic" %}
+          {% when "Motion Planning and Control" %}{% assign theme_id = "theme-motion" %}
+          {% when "Collective Intelligence" %}{% assign theme_id = "theme-collective" %}
+          {% when "Task and Motion Planning" %}{% assign theme_id = "theme-tamp" %}
+          {% else %}{% assign theme_id = "theme-other" %}
+        {% endcase %}
+        <div class="project-theme-group" id="{{ theme_id }}">
           <span class="section-label" style="background:{{ theme_color }}">{{ theme_name }}</span>
           <div class="project-grid">
             {% for project in theme_projects %}
@@ -433,38 +392,34 @@ title: Himani Sinhmar
   const hash = window.location.hash.slice(1);
   if (hash && ['about','research','publications','cv'].includes(hash)) switchTab(hash);
 
-  // ── Constellation hover ──
-  const nodes = Array.from(document.querySelectorAll('.cnode'));
-  const edges = Array.from(document.querySelectorAll('.cedge'));
-
-  nodes.forEach(node => {
-    node.addEventListener('mouseenter', function () {
-      const id = this.dataset.id;
-      edges.forEach(e => {
-        const linked = e.dataset.from === id || e.dataset.to === id;
-        e.classList.toggle('lit',    linked);
-        e.classList.toggle('dimmed', !linked);
-      });
-      nodes.forEach(n => {
-        if (n === this) return;
-        const nid = n.dataset.id;
-        const linked = edges.some(e =>
-          (e.dataset.from === id && e.dataset.to === nid) ||
-          (e.dataset.to   === id && e.dataset.from === nid)
-        );
-        n.classList.toggle('lit',    linked);
-        n.classList.toggle('dimmed', !linked);
-      });
+  // ── Navigate to theme in research tab ──
+  window.goToTheme = function(themeId) {
+    switchTab('research');
+    requestAnimationFrame(() => {
+      const el = document.getElementById(themeId);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
+  };
 
-    node.addEventListener('mouseleave', function () {
-      edges.forEach(e => e.classList.remove('lit', 'dimmed'));
-      nodes.forEach(n => n.classList.remove('lit', 'dimmed'));
-    });
+  // ── Dark mode ──
+  const html   = document.documentElement;
+  const toggle = document.getElementById('dark-toggle');
+  const moonSVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z"/></svg>';
+  const sunSVG  = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
 
-    node.addEventListener('click', function () {
-      if (this.dataset.href) window.location.href = this.dataset.href;
+  function applyDark(on) {
+    html.classList.toggle('dark', on);
+    if (toggle) toggle.innerHTML = on ? sunSVG : moonSVG;
+  }
+
+  applyDark(localStorage.getItem('dark') === '1');
+
+  if (toggle) {
+    toggle.addEventListener('click', () => {
+      const isDark = !html.classList.contains('dark');
+      localStorage.setItem('dark', isDark ? '1' : '0');
+      applyDark(isDark);
     });
-  });
+  }
 })();
 </script>
