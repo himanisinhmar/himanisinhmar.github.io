@@ -6,8 +6,8 @@ theme_color: "#4f46e5"
 tagline: "Safe, scalable, and deadlock-free multi-robot navigation through continuous adaptation and local interaction rules."
 sort_order: 2
 videos:
-  - env.mp4
-  - decision.mp4
+  - highway.mp4
+  - crowds.mp4
   - hardware_video.mp4
 ---
 
