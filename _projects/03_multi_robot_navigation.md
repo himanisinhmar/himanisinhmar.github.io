@@ -6,9 +6,9 @@ theme_color: "#4f46e5"
 tagline: "Safe, scalable, and deadlock-free multi-robot navigation through continuous adaptation and local interaction rules."
 sort_order: 2
 videos:
+  - hardware_video.mp4
   - highway.mp4
   - crowds.mp4
-  - hardware_video.mp4
 ---
 
 This project develops decentralized control methods for safe and scalable multi-robot navigation in crowded, uncertain, and heterogeneous environments. The central question is how robots can resolve local conflicts and maintain global progress using only local sensing, without explicit communication, trajectory replanning, or centralized coordination. My approach is based on continuous-time decision dynamics that amplify latent temporal structure already present in local interaction geometry, allowing coordinated traversal order to emerge online from observed motion.
