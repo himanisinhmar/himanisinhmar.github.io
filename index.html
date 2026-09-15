@@ -90,13 +90,17 @@ title: Himani Sinhmar
       <!-- Row 1: multi-video themes side by side -->
       <div class="theme-section">
         <span class="theme-section__label" style="background:#4f46e5" onclick="goToTheme('theme-neuromorphic')">Neuromorphic Decision Dynamics and Control</span>
-        <div class="theme-section__videos theme-section__videos--three">
+        <div class="theme-section__videos">
           <div class="vid-wrap" onclick="location.href='{{ '/projects/02_environment_monitoring' | relative_url }}'">
             <video autoplay muted loop playsinline><source src="{{ '/media/env-moni.mp4' | relative_url }}" type="video/mp4"></video>
             <button class="vid-ctrl" onclick="event.stopPropagation();toggleVid(this)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg></button>
           </div>
           <div class="vid-wrap" onclick="location.href='{{ '/projects/03_multi_robot_navigation' | relative_url }}'">
             <video autoplay muted loop playsinline><source src="{{ '/media/highway.mp4' | relative_url }}" type="video/mp4"></video>
+            <button class="vid-ctrl" onclick="event.stopPropagation();toggleVid(this)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg></button>
+          </div>
+          <div class="vid-wrap" onclick="location.href='{{ '/projects/03_multi_robot_navigation' | relative_url }}'">
+            <video autoplay muted loop playsinline><source src="{{ '/media/hardware_video.mp4' | relative_url }}" type="video/mp4"></video>
             <button class="vid-ctrl" onclick="event.stopPropagation();toggleVid(this)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg></button>
           </div>
           <div class="vid-wrap" onclick="location.href='{{ '/projects/03_multi_robot_navigation' | relative_url }}'">

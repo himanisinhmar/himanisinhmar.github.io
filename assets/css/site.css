@@ -223,10 +223,6 @@ a:hover { text-decoration: underline; }
   gap: 0.5rem;
 }
 
-.theme-section__videos--three {
-  grid-template-columns: repeat(3, 1fr);
-}
-
 .theme-section__videos video {
   width: 100%;
   height: auto;
@@ -733,8 +729,6 @@ html.dark .tabs { background: var(--bg); }
   .theme-sections { grid-template-columns: 1fr; }
   .theme-grid { grid-template-columns: 1fr; }
   .theme-section__videos { grid-template-columns: 1fr; }
-  .theme-section__videos--three { grid-template-columns: repeat(2, 1fr); }
-
   .project-grid { grid-template-columns: 1fr; }
   .proj__body { grid-template-columns: 1fr; }
 }
