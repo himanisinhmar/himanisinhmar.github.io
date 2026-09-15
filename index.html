@@ -60,8 +60,11 @@ title: Himani Sinhmar
   ═══════════════════════════════════════════════════════ -->
   <section class="tab-panel active" id="tab-about">
 
-    <!-- Bio text on top, full width -->
-    <div class="about-text">
+    {% assign pauseIcon = '<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>' %}
+
+    <!-- Introduction and featured research videos -->
+    <div class="about-feature">
+      <div class="about-text">
       <p class="about__vision">
        I am a Postdoctoral Research Associate at Princeton University working at the intersection of robotics, control theory, neuromorphic decision-making, and game theory. My research asks how individual robots and teams can think and act simultaneously, forming fast, reliable decisions as they move and interact with the physical world and one another. I develop interpretable dynamical models of embodied decision formation and translate them into decentralized, resource-aware controllers that rely solely on local information, without explicit communication. These controllers shape fluid, goal-directed behavior in heterogeneous collectives of robots, people, and other interacting agents while providing mathematical guarantees of safety and task success in uncertain, dynamic, and social environments.
       </p>
@@ -80,15 +83,9 @@ title: Himani Sinhmar
       <p class="about__vision">
         Outside of research, I enjoy running, hiking, and reading about world affairs, psychology, and philosophy of science.
       </p>
-    </div>
+      </div>
 
-    <!-- Theme sections — 2×2 grid, below the text -->
-    <div class="theme-sections">
-
-      {% assign pauseIcon = '<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>' %}
-
-      <!-- Row 1: multi-video themes side by side -->
-      <div class="theme-section">
+      <div class="theme-section theme-section--featured">
         <span class="theme-section__label" style="background:#4f46e5" onclick="goToTheme('theme-neuromorphic')">Neuromorphic Decision Dynamics and Control</span>
         <div class="theme-section__videos">
           <div class="vid-wrap" onclick="location.href='{{ '/projects/02_environment_monitoring' | relative_url }}'">
@@ -109,7 +106,10 @@ title: Himani Sinhmar
           </div>
         </div>
       </div>
+    </div><!-- /about-feature -->
 
+    <!-- Remaining research themes -->
+    <div class="theme-sections theme-sections--remaining">
       <div class="theme-section">
         <span class="theme-section__label" style="background:#0d9488" onclick="goToTheme('theme-collective')">Collective Intelligence</span>
         <div class="theme-section__videos">
