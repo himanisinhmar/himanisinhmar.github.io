@@ -20,7 +20,7 @@ permalink: /projects/03_multi_robot_navigation/
   <meta name="description" content="Safe emergent coordination in shared spaces. Neuromorphic Decision Dynamics for adaptive, decentralized navigation across ground robots, traffic, and aerial vehicles.">
   <meta name="theme-color" content="#12171d">
   <meta property="og:title" content="Safe emergent coordination in shared spaces · NDD">
-  <meta property="og:description" content="Local decisions. Adaptive interactions. Certifiable collective behavior. Explore neuromorphic decision dynamics through interactive simulations and hardware experiments.">
+  <meta property="og:description" content="Local decisions. Adaptive interactions. Certifiable emergent behavior. Explore neuromorphic decision dynamics through interactive simulations and hardware experiments.">
   <meta property="og:type" content="website">
   <title>Safe emergent coordination in shared spaces · NDD</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
@@ -33,7 +33,7 @@ permalink: /projects/03_multi_robot_navigation/
     <div class="wrap header-inner">
     <a class="brand" href="https://himanisinhmar.github.io/" aria-label="Himani Sinhmar’s research website">Himani Sinhmar <span>/ Research</span></a>
     <nav aria-label="Page navigation">
-      <a href="#explore">Explore</a><a href="#results">Results</a><a href="#hardware">Hardware</a><a href="#paper">Paper <span aria-hidden="true">↗</span></a>
+      <a href="#overview">Overview</a><a href="#explore">Demos</a><a href="#hardware">Hardware</a><a href="#paper">Paper <span aria-hidden="true">↗</span></a>
     </nav>
     </div>
   </header>
@@ -49,13 +49,37 @@ permalink: /projects/03_multi_robot_navigation/
         <div class="hero-meta">
           <p class="authors">Himani Sinhmar · Vaibhav Srivastava · Naomi Ehrich Leonard</p>
           <p class="institutions">Princeton University · Michigan State University</p>
-          <div class="links"><a class="button" href="https://arxiv.org/abs/2610.33271" target="_blank" rel="noopener">Paper <span aria-hidden="true">↗</span></a><a class="button button-secondary" href="https://github.com/himanisinhmar/GenericIntersection" target="_blank" rel="noopener">Code <span aria-hidden="true">↗</span></a><a class="text-link" href="#explore">Explore the dynamics <span aria-hidden="true">↓</span></a></div>
+          <div class="links"><a class="button" href="https://arxiv.org/abs/2610.33271" target="_blank" rel="noopener">Paper <span aria-hidden="true">↗</span></a><a class="button button-secondary" href="https://github.com/himanisinhmar/GenericIntersection" target="_blank" rel="noopener">Code <span aria-hidden="true">↗</span></a><a class="text-link" href="#overview">Read the overview <span aria-hidden="true">↓</span></a></div>
         </div>
       </div>
     </section>
+    </div>
 
+    <section id="overview" class="overview wrap" aria-labelledby="overview-heading">
+      <div class="section-heading"><h2 id="overview-heading">Overview</h2></div>
+      <div class="overview-copy">
+        <h3>The problem</h3>
+        <p>Collision avoidance alone does not ensure that robots get through a crowded space. At a bottleneck or crossing, robots can keep yielding to one another or repeatedly change their decisions without making progress. The challenge is to establish a consistent passage order while conflicts overlap and groups change, using only local sensing.</p>
+        <h3>Our approach</h3>
+        <p>NDD links each robot’s internal decision and attention states to its physical motion. A robot follows its prescribed path and continuously adjusts its speed in response to nearby agents’ relative positions and velocities. As conflict becomes urgent, feedback between decisions and motion amplifies small timing differences, breaks indecision, and establishes a traversal order within the engaged group.</p>
+        <p>The order persists while conflicts clear. Groups can split or merge, and robots return to nominal motion when interaction is no longer needed. The controller requires no communication, preassigned priorities, or models of neighbors’ intended actions. The <a href="https://arxiv.org/abs/2610.33271" target="_blank" rel="noopener">paper</a> derives explicit conditions for safe passage, continued progress, and robustness.</p>
+      </div>
+    </section>
+
+    <section id="mechanism" class="mechanism wrap">
+      <div class="section-heading"><p class="eyebrow">Online learning & adaptation</p><h2>Coordination takes shape as agents move.</h2></div>
+      <div class="mechanism-content">
+        <p class="intro">Who matters, who yields, and who moves first emerge from the ongoing interaction.</p>
+        <div class="mechanism-step"><span class="step-number">01</span><div><h3>Learning the interaction</h3><p>Interaction weights are learned and continuously adapted from real-time motion cues, focusing each agent’s attention on the conflicts that matter now.</p></div></div>
+        <div class="mechanism-step"><span class="step-number">02</span><div><h3>Acting on the evidence</h3><p>Decision–action feedback amplifies small differences in motion into a coordinated traversal order. Agents adjust their speed while preserving their paths.</p></div></div>
+        <div class="mechanism-step"><span class="step-number">03</span><div><h3>Adapting as the scene changes</h3><p>Groups form, split, and merge. Decisions evolve with new conflicts and relax as conflicts clear, restoring nominal motion.</p></div></div>
+      </div>
+    </section>
+
+    <div class="embodiments">
     <section id="explore" class="explore wrap" aria-labelledby="explore-heading">
-      <div class="section-line"><h2 id="explore-heading">Different embodiments. A common decision mechanism.</h2><span class="small-label">Interactive experiments</span></div>
+      <div class="section-line"><h2 id="explore-heading">Across embodiments</h2><span class="small-label">Interactive experiments</span></div>
+      <p class="embodiments-deck">Explore the same interaction mechanism in aerial traffic, road intersections, and warehouse navigation. Select a domain below, then follow the motion and decision traces in each recorded experiment.</p>
       <div class="lab-shell">
         <div class="lab-toolbar">
           <div class="tabs" role="tablist" aria-label="Application domain">
@@ -75,25 +99,33 @@ permalink: /projects/03_multi_robot_navigation/
     </section>
     </div>
 
-    <section id="mechanism" class="mechanism wrap">
-      <div class="section-heading"><p class="eyebrow">Online learning & adaptation</p><h2>Coordination takes shape as agents move.</h2></div>
-      <div class="mechanism-content">
-        <p class="intro">Who matters, who yields, and who moves first emerge from the ongoing interaction.</p>
-        <div class="mechanism-step"><span class="step-number">01</span><div><h3>Learning the interaction</h3><p>Interaction weights are learned and continuously adapted from real-time motion cues, focusing each agent’s attention on the conflicts that matter now.</p></div></div>
-        <div class="mechanism-step"><span class="step-number">02</span><div><h3>Acting on the evidence</h3><p>Decision–action feedback amplifies small differences in motion into a coordinated traversal order. Agents adjust their speed while preserving their paths.</p></div></div>
-        <div class="mechanism-step"><span class="step-number">03</span><div><h3>Adapting as the scene changes</h3><p>Groups form, split, and merge. Decisions evolve with new conflicts and relax as conflicts clear, restoring nominal motion.</p></div></div>
-      </div>
-    </section>
-
     <section id="results" class="results wrap">
-      <div class="section-heading result-heading"><div><p class="eyebrow">The central result</p><h2>Collective behavior we can design and certify.</h2></div><p class="section-deck">Local sensing and feedback give rise to safe passage and continued progress across changing groups.</p></div>
+      <div class="section-heading result-heading"><div><p class="eyebrow">The central result</p><h2>Emergent behavior we can design and certify.</h2></div><p class="section-deck">Local sensing and feedback give rise to safe passage and continued progress across changing groups.</p></div>
       <div class="guarantees">
         <article><span class="result-index">I</span><h3>Safety</h3><p>Sufficient temporal separation keeps agents collision-free as they traverse shared regions.</p></article>
         <article><span class="result-index">II</span><h3>Liveness</h3><p>A consistent traversal order resolves conflicts in finite time, without deadlock or livelock.</p></article>
         <article><span class="result-index">III</span><h3>Robustness</h3><p>Explicit margins accommodate bounded sensing, motion-prediction, and actuation errors.</p></article>
       </div>
       <details class="technical"><summary>What supports the guarantees? <span aria-hidden="true">+</span></summary><div><p>The paper gives joint conditions on sensing range, feedback gains, response time scales, actuation limits, and admissible conflict geometry. Fixed local parameters are independent of total population and realized group size. Guarantees apply to cooperative NDD-controlled populations within the stated assumptions, including finite conflict recurrences per episode.</p><p>The aerial speed/altitude demonstrations and cooperation-inference extension illustrate further applications; their displayed trials do not extend the paper’s theorem to arbitrary 3D flight or mixed populations. <a href="https://arxiv.org/abs/2610.33271" target="_blank" rel="noopener">Read the analysis ↗</a></p></div></details>
+    </section>
 
+    <section id="hardware" class="hardware wrap">
+      <div class="section-heading result-heading"><div><p class="eyebrow">Hardware experiments</p><h2>Shared space. Real interactions.</h2></div><p class="section-deck">From robots coordinating with one another to robots responding to a person moving through their workspace.</p></div>
+      <div class="video-grid">
+        <article class="video-story"><video controls playsinline preload="metadata" poster="assets/antipodal-poster.jpg" aria-label="Six TurtleBot3 robots coordinating an antipodal crossing"><source src="assets/antipodal.mp4" type="video/mp4"><a href="assets/antipodal.mp4">Watch the antipodal experiment</a></video><p class="small-label">Six robots · antipodal exchange</p><h3>A traversal order emerges.</h3><p>Each robot adjusts its speed along its prescribed path. Passage is coordinated without inter-robot communication or assigned priorities.</p><a class="text-link" href="assets/antipodal.mp4" target="_blank" rel="noopener">Open video <span aria-hidden="true">↗</span></a></article>
+        <article class="video-story"><video controls playsinline preload="metadata" poster="assets/human-poster.jpg" aria-label="Six robots and a follower navigating with a person moving through the workspace"><source src="assets/human-interaction.mp4" type="video/mp4"><a href="assets/human-interaction.mp4">Watch the human-interaction experiment</a></video><p class="small-label">Six robots, a follower & a human · cooperation inference</p><h3>Adaptation when others do not cooperate.</h3><p>A lightweight inference layer learns whether neighbors are cooperating from their observed motion. Robots use those estimates to adapt their response to non-cooperative agents.</p><a class="text-link" href="assets/human-interaction.mp4" target="_blank" rel="noopener">Open video <span aria-hidden="true">↗</span></a></article>
+      </div>
+      <p class="hardware-note">Videos retain the supplied playback speed. Cooperation-inference extension with Antoun K. Salib.</p>
+    </section>
+
+    <section id="paper" class="paper wrap">
+      <div><p class="eyebrow">Paper & resources</p><h2>Neuromorphic Decision Dynamics for Deadlock-free Safe Navigation in Congested Environments</h2><p class="paper-authors">Himani Sinhmar · Vaibhav Srivastava · Naomi Ehrich Leonard</p><p class="small-label">arXiv:2610.33271 · 2026</p></div>
+      <div class="resource-links"><a href="https://arxiv.org/abs/2610.33271" target="_blank" rel="noopener">Paper & supplementary analysis <span>↗</span></a><a href="https://github.com/himanisinhmar/GenericIntersection" target="_blank" rel="noopener">Ground navigation code <span>↗</span></a><a href="https://github.com/AntounSalib/MRN_rogue_hardware" target="_blank" rel="noopener">Cooperation-inference hardware code <span>↗</span></a><a href="flight-lab.html#delivery" target="_blank" rel="noopener">Flight Lab <span>↗</span></a><a href="intersection-lab.html#highway_turning" target="_blank" rel="noopener">Intersection Lab <span>↗</span></a><button id="copy-citation">Copy BibTeX <span aria-hidden="true">⧉</span></button><p id="copy-status" role="status" aria-live="polite"></p><noscript><a href="assets/citation.bib">Download BibTeX</a></noscript></div>
+    </section>
+
+    <section id="comparison" class="comparison wrap" aria-labelledby="comparison-heading">
+      <div class="section-heading"><p class="eyebrow">Benchmark results</p><h2 id="comparison-heading">Comparison with state-of-the-art methods</h2></div>
+      <p class="section-deck">NDD is evaluated alongside ORCA, LivePoint, and centralized and decentralized CBF-QP under the paper’s shared benchmark conditions.</p>
       <div class="benchmark-heading"><h3>Safe passage as congestion increases.</h3><a href="assets/benchmark.pdf" target="_blank" rel="noopener">View original figure <span aria-hidden="true">↗</span></a></div>
       <figure class="benchmark"><a href="assets/benchmark.pdf" target="_blank" rel="noopener" aria-label="Open the original benchmark figure"><img src="assets/benchmark.png" alt="Three benchmark plots. NDD has 100 percent safe-agent success at all tested group sizes, retains separation above 0.7 metres, and has zero path deviation. ORCA, LivePoint, and centralized and decentralized CBF-QP perform less well on safe completion in these scenarios." loading="lazy" width="1860" height="774"></a><figcaption>50 randomized scenarios per group size · 4, 8, 12, 24, and 32 agents · 95% bootstrap confidence intervals. Comparisons use the paper’s shared benchmark conditions.</figcaption></figure>
       <div class="results-strip">
@@ -102,20 +134,6 @@ permalink: /projects/03_multi_robot_navigation/
         <div><strong>0.20–0.27<span> ms</span></strong><h4>Mean amortized compute</h4><p>Per agent, in separate 12- and 24-agent timing studies.</p></div>
       </div>
       <details class="technical"><summary>Computation and benchmark details <span aria-hidden="true">+</span></summary><div><p>NDD evaluates locally sensed interactions without communication, centralized scheduling, or combinatorial passage-order search. Timing measurements use a single Python process on an Apple M4 Pro. Values are fleet command-generation time divided by agent count, not directly measured individual-agent latency or end-to-end sensing latency.</p><p>The means are 0.1967 ms for 12 agents and 0.2662 ms for 24 agents. These separate timing studies measure implementation cost; the figure above reports the paper’s navigation benchmark. Shorter completion times do not imply better safe navigation when separation falls below the safety threshold.</p><p><a href="assets/compute-results.json" target="_blank" rel="noopener">Timing data and measurement conditions ↗</a></p></div></details>
-    </section>
-
-    <section id="hardware" class="hardware wrap">
-      <div class="section-heading result-heading"><div><p class="eyebrow">Hardware experiments</p><h2>Shared space. Real interactions.</h2></div><p class="section-deck">From robots coordinating with one another to robots responding to a person moving through their workspace.</p></div>
-      <div class="video-grid">
-        <article class="video-story"><video controls playsinline preload="metadata" poster="assets/antipodal-poster.jpg" aria-label="Six TurtleBot3 robots coordinating an antipodal crossing"><source src="assets/antipodal.mp4" type="video/mp4"><a href="assets/antipodal.mp4">Watch the antipodal experiment</a></video><p class="small-label">Six robots · antipodal exchange</p><h3>A traversal order emerges.</h3><p>Each robot adjusts its speed along its prescribed path. Passage is coordinated without inter-robot communication or assigned priorities.</p><a class="text-link" href="assets/antipodal.mp4" target="_blank" rel="noopener">Open video <span aria-hidden="true">↗</span></a></article>
-        <article class="video-story"><video controls playsinline preload="metadata" poster="assets/human-poster.jpg" aria-label="Seven robots navigating with a person moving through the workspace"><source src="assets/human-interaction.mp4" type="video/mp4"><a href="assets/human-interaction.mp4">Watch the human-interaction experiment</a></video><p class="small-label">Robots and a human · cooperation inference</p><h3>Adaptation when others do not cooperate.</h3><p>A lightweight inference layer learns whether neighbors are cooperating from their observed motion. Robots use those estimates to adapt their response to non-cooperative agents.</p><a class="text-link" href="assets/human-interaction.mp4" target="_blank" rel="noopener">Open video <span aria-hidden="true">↗</span></a></article>
-      </div>
-      <p class="hardware-note">Videos retain the supplied playback speed. Cooperation-inference extension with Antoun K. Salib.</p>
-    </section>
-
-    <section id="paper" class="paper wrap">
-      <div><p class="eyebrow">Paper & resources</p><h2>Neuromorphic Decision Dynamics for Deadlock-free Safe Navigation in Congested Environments</h2><p class="paper-authors">Himani Sinhmar · Vaibhav Srivastava · Naomi Ehrich Leonard</p><p class="small-label">arXiv:2610.33271 · 2026</p></div>
-      <div class="resource-links"><a href="https://arxiv.org/abs/2610.33271" target="_blank" rel="noopener">Paper & supplementary analysis <span>↗</span></a><a href="https://github.com/himanisinhmar/GenericIntersection" target="_blank" rel="noopener">Ground navigation code <span>↗</span></a><a href="https://github.com/AntounSalib/MRN_rogue_hardware" target="_blank" rel="noopener">Cooperation-inference hardware code <span>↗</span></a><a href="flight-lab.html#delivery" target="_blank" rel="noopener">Flight Lab <span>↗</span></a><a href="intersection-lab.html#highway_turning" target="_blank" rel="noopener">Intersection Lab <span>↗</span></a><button id="copy-citation">Copy BibTeX <span aria-hidden="true">⧉</span></button><p id="copy-status" role="status" aria-live="polite"></p><noscript><a href="assets/citation.bib">Download BibTeX</a></noscript></div>
     </section>
   </main>
   <footer class="wrap"><a href="https://himanisinhmar.github.io/">← More research</a><span>Himani Sinhmar · Princeton University</span><a href="mailto:himani.sinhmar@princeton.edu">Get in touch ↗</a></footer>
