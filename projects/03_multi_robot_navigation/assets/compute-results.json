@@ -1,0 +1,18 @@
+{
+  "measurement": "Mean wall-clock fleet command-generation time divided by agent count; not directly timed individual-agent or end-to-end latency.",
+  "hardware": "Apple M4 Pro, 24 GB, macOS arm64",
+  "execution": "Single Python 3.12 process; serial agent updates; no concurrent study workers; one BLAS thread.",
+  "source": "GenericIntersection/results/ndd_orca_livepoint_compute_12_24",
+  "cases": [
+    {
+      "agents": 12,
+      "samples": 4638,
+      "ndd_mean_amortized_per_agent_ms": 0.1966831533707058
+    },
+    {
+      "agents": 24,
+      "samples": 4474,
+      "ndd_mean_amortized_per_agent_ms": 0.26623399524102226
+    }
+  ]
+}
